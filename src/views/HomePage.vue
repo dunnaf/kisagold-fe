@@ -1,0 +1,53 @@
+<template>
+  <AppLayout>
+    <HPHeroCarousel v-if="isLoaded" />
+    <HPShopByCategory v-if="isLoaded" />
+    <HPProductSelection v-if="isLoaded" />
+  </AppLayout>
+</template>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+import { withLoading } from '@/utils/loading'
+import AppLayout from '../components/layout/AppLayout.vue'
+import HPHeroCarousel from '../components/homepage/HPHeroCarousel.vue'
+import HPShopByCategory from '../components/homepage/HPShopByCategory.vue'
+import HPProductSelection from '../components/homepage/HPProductSelection.vue'
+
+// ==================== State ====================
+const isLoaded = ref(false)
+
+// ==================== Data Loading ====================
+/**
+ * Simulates fetching homepage data (carousel, featured products, etc.)
+ * In a real application, this would fetch from an API
+ */
+const loadHomePageData = async () => {
+  // Simulate API call delay
+  await new Promise(resolve => setTimeout(resolve, 800))
+  
+  // In a real app, you would fetch data here:
+  // const response = await fetch('/api/homepage')
+  // const data = await response.json()
+  
+  return true
+}
+
+// ==================== Lifecycle ====================
+onMounted(async () => {
+  try {
+    // Load homepage data with loading animation
+    await withLoading(loadHomePageData, {
+      duration: 1500,    // Progress bar duration
+      delay: 300,        // Delay before hiding
+      minDisplayTime: 1000 // Minimum display time for smooth UX
+    })
+    
+    isLoaded.value = true
+  } catch (error) {
+    console.error('Failed to load homepage data:', error)
+    // Even on error, show the page (with fallback/cached data)
+    isLoaded.value = true
+  }
+})
+</script>

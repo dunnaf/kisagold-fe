@@ -1,0 +1,217 @@
+{
+  "nav": {
+    "about": "About Us",
+    "products": "Our Product",
+    "category": "Category",
+    "price": "Price"
+  },
+  "home": {
+    "hero": {
+      "title": "Welcome to Kisa Gold",
+      "subtitle": "Your Trusted Partner for Quality Products",
+      "cta": "View Products"
+    },
+    "featured": {
+      "title": "Featured Products"
+    },
+    "about": {
+      "title": "About Us",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+    }
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Explore our collection of quality products",
+    "backToProducts": "Back to Products",
+    "addToCart": "Add to Cart",
+    "description": "Description",
+    "specifications": "Specifications"
+  },
+  "productList": {
+    "hero": {
+      "title": "A Calm Beginning to Protecting What Matters",
+      "description": "The gold itself becomes more than metal. It becomes a symbol of responsibility, long-term thinking, and self-trust. Not because someone pushed them to buy, but because the decision finally made sense.",
+      "images": {
+        "background": "Product list hero background"
+      }
+    },
+    "luxury": {
+      "brand": "KISAGOLD",
+      "title": "The Pinnacle of Luxury",
+      "description": "Gold is more than an asset—it is a symbol of enduring security and a legacy for the future. As your premier partner in precious metals, KISAGOLD offers gold bars of the highest purity, meticulously crafted to protect your wealth across generations. Indulge in privileged access to secure storage, premium buyback options, and personalized portfolio services beyond compare.",
+      "images": {
+        "background": "KISAGOLD Luxury Background"
+      }
+    },
+    "categories": {
+      "all": "All Product",
+      "classic99": "KISA24 Classic 99.99%",
+      "classic24k": "KISA24 Classic 24K",
+      "custom": "KISA24 Custom"
+    },
+    "subCategories": {
+      "all": "All",
+      "lunarNewYear": "Lunar New Year Set",
+      "eid": "Eid Set",
+      "hampers": "Hampers",
+      "giftBox": "Gift Box"
+    },
+    "noProducts": {
+      "title": "No Products Found",
+      "description": "We couldn't find any products in this category. Please try selecting a different category or check back later.",
+      "icon": "Search icon"
+    }
+  },
+  "footer": {
+    "social": {
+      "instagram": "Instagram",
+      "linkedin": "Linkedin"
+    },
+    "nav": {
+      "home": "Home",
+      "goldCategory": "Gold Category",
+      "goldSelection": "Gold Selection",
+      "goldList": "Gold List",
+      "howToPurchase": "How to Purchase",
+      "pricing": "Pricing",
+      "faq": "FAQ",
+      "verification": "Verification"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "companyName": "PT KISA MULIA ABADI",
+      "address": "Prosperity Tower 21F, Kawasan District 8, SCBD Lot. 13 Jl. Jend. Sudirman Kav. 52-53, Jakarta Selatan, Indonesia",
+      "email": "Email:",
+      "emailAddress": "kisamuliaabadi@gmail.com",
+      "contactPerson": "Contact Person:",
+      "phone": "+628516888 8877"
+    },
+    "bottom": {
+      "terms": "Terms & Conditions",
+      "privacy": "Privacy Policy",
+      "contactUs": "Contact Us",
+      "copyright": "© {year} KisaGOLD™ All Rights Reserved."
+    }
+  },
+  "verify": {
+    "title": "Verify the Authenticity of<br>Your KISA24",
+    "description": "Enter your Kisa24 Gold Serial Number below to authenticate your gold through our exclusive verification system, ensuring its provenance and prestige.",
+    "form": {
+      "serialNumber": "Enter serial number",
+      "privateKey": "Enter private key",
+      "submit": "Verify your KISA24"
+    },
+    "images": {
+      "background": "Verification background",
+      "gold": "KISA24 Gold",
+      "flower": "Flower decoration"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "home": "Home",
+    "allRightsReserved": "All Rights Reserved"
+  },
+  "productDetail": {
+    "image": {
+      "thumbnailAlt": "Product thumbnail {index}",
+      "mainImageAlt": "Product main image"
+    },
+    "info": {
+      "logoAlt": "KISA24 logo",
+      "productName": "KISA24",
+      "fields": {
+        "type": "Type",
+        "netWeight": "Net Weight",
+        "dimensions": "Dimensions",
+        "purity": "Purity",
+        "caseType": "Case Type",
+        "physicalSecurity": "Physical Security Features",
+        "digitalSecurity": "Digital Security Features",
+        "quality": "Quality & Standard"
+      },
+      "values": {
+        "type": "KISA24 100gr",
+        "netWeight": "100gr",
+        "dimensions": "75mm x 45mm x 6mm",
+        "purity": "999.9",
+        "caseType": "KISA24 navy blue acrylic frame",
+        "physicalSecurity": "Precision magnetic closure, tamper-evident hologram seal",
+        "digitalSecurity": "Unique serial code, private key, QR code verifiable through Kisagold online authentication platform",
+        "quality": "Produced by SNI-licensed refinery, verified by certified assayer. Lifetime buyback guaranteed by PT Kisa Mulia Abadi."
+      },
+      "buttons": {
+        "inquire": "INQUIRE NOW",
+        "backToHome": "BACK TO HOMEPAGE"
+      }
+    },
+    "recommended": {
+      "title": "YOU MAY ALSO LIKE",
+      "flowerAlt": "Flower decoration",
+      "viewAllButton": "VIEW ALL PRODUCT",
+      "navigation": {
+        "previous": "Previous products",
+        "next": "Next products"
+      }
+    }
+  },
+  "shopByCategory": {
+    "title": "Shop By Category",
+    "description": "We offer the most competitive pricing in the market — without sacrificing quality, service, or authenticity. Our best price guarantee ensures you receive unrivaled value, whether you're expanding your collection or making your first investment in gold.",
+    "flowerAlt": "Flower Logo",
+    "cards": {
+      "classic99": {
+        "title": "KISA24 Classic 99.99%",
+        "description": "SNI-certified gold bar with 99.99% purity. Protected with advanced physical & digital security features and lifetime buyback guarantee from PT Kisa Mulia Abadi.",
+        "buttonText": "Browse collection"
+      },
+      "classic24k": {
+        "title": "KISA24 Classic 24K",
+        "description": "Gold bar with 99.00% purity. Protected with advanced physical & digital security features and lifetime buyback guarantee from PT Kisa Mulia Abadi.",
+        "buttonText": "Browse collection"
+      },
+      "custom": {
+        "title": "KISA24 Custom",
+        "description": "Make any celebration truly extraordinary with personalized, ready-to-wear pieces. Protected with advanced physical & digital security features and lifetime buyback guarantee from PT Kisa Mulia Abadi.",
+        "buttonText": "Inquire Now"
+      },
+      "comingSoon": {
+        "title": "Coming Soon",
+        "description": "From the hands of artisan makers to yours, be the first to know when we launch our newest collection. Be prepared to fall in love.",
+        "buttonText": "Inquire Now"
+      }
+    },
+    "navigation": {
+      "previous": "Previous category",
+      "next": "Next category"
+    }
+  },
+  "heroCarousel": {
+    "slides": {
+      "goldenBond": {
+        "title": "Golden Bond",
+        "price": "Rp 263.321.400",
+        "description": "From your hands to theirs—a gift that never loses its shine. A legacy that lasts for generations.",
+        "buttonText": "Inquire now"
+      }
+    },
+    "images": {
+      "alt": "{title}"
+    },
+    "navigation": {
+      "goToSlide": "Go to slide {number}"
+    }
+  },
+  "productSelection": {
+    "title": "Product Selection",
+    "description": "Every KISA24 gold bar is fully traceable—from its geological origin in Papua to its final refinement and delivery. The entire process is carried out by our licensed affiliated entities, ensuring provenance at every step.",
+    "categories": {
+      "all": "All Product",
+      "classic99": "KISA24 Classic 99.99%",
+      "classic24k": "KISA24 Classic 24K",
+      "custom": "KISA24 Custom"
+    },
+    "viewAllButton": "VIEW ALL PRODUCT"
+  }
+}

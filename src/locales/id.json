@@ -1,0 +1,217 @@
+{
+  "nav": {
+    "about": "Tentang Kami",
+    "products": "Produk Kami",
+    "category": "Kategori",
+    "price": "Harga"
+  },
+  "home": {
+    "hero": {
+      "title": "Selamat Datang di Kisa Gold",
+      "subtitle": "Mitra Terpercaya Anda untuk Produk Berkualitas",
+      "cta": "Lihat Produk"
+    },
+    "featured": {
+      "title": "Produk Unggulan"
+    },
+    "about": {
+      "title": "Tentang Kami",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+    }
+  },
+  "products": {
+    "title": "Produk Kami",
+    "subtitle": "Jelajahi koleksi produk berkualitas kami",
+    "backToProducts": "Kembali ke Produk",
+    "addToCart": "Tambah ke Keranjang",
+    "description": "Deskripsi",
+    "specifications": "Spesifikasi"
+  },
+  "productList": {
+    "hero": {
+      "title": "Awal yang Tenang untuk Melindungi Apa yang Penting",
+      "description": "Emas itu sendiri menjadi lebih dari sekadar logam. Ia menjadi simbol tanggung jawab, pemikiran jangka panjang, dan kepercayaan diri. Bukan karena seseorang memaksa mereka untuk membeli, tetapi karena keputusan itu akhirnya masuk akal.",
+      "images": {
+        "background": "Latar belakang hero daftar produk"
+      }
+    },
+    "luxury": {
+      "brand": "KISAGOLD",
+      "title": "Puncak Kemewahan",
+      "description": "Emas lebih dari sekadar aset—ia adalah simbol keamanan yang abadi dan warisan untuk masa depan. Sebagai mitra utama Anda dalam logam mulia, KISAGOLD menawarkan batangan emas dengan kemurnian tertinggi, dibuat dengan cermat untuk melindungi kekayaan Anda lintas generasi. Nikmati akses istimewa ke penyimpanan aman, opsi pembelian kembali premium, dan layanan portofolio personal yang tak tertandingi.",
+      "images": {
+        "background": "Latar Belakang Kemewahan KISAGOLD"
+      }
+    },
+    "categories": {
+      "all": "Semua Produk",
+      "classic99": "KISA24 Classic 99.99%",
+      "classic24k": "KISA24 Classic 24K",
+      "custom": "KISA24 Custom"
+    },
+    "subCategories": {
+      "all": "Semua",
+      "lunarNewYear": "Set Tahun Baru Imlek",
+      "eid": "Set Lebaran",
+      "hampers": "Hampers",
+      "giftBox": "Kotak Hadiah"
+    },
+    "noProducts": {
+      "title": "Produk Tidak Ditemukan",
+      "description": "Kami tidak dapat menemukan produk dalam kategori ini. Silakan coba pilih kategori lain atau kembali lagi nanti.",
+      "icon": "Ikon pencarian"
+    }
+  },
+  "footer": {
+    "social": {
+      "instagram": "Instagram",
+      "linkedin": "Linkedin"
+    },
+    "nav": {
+      "home": "Beranda",
+      "goldCategory": "Kategori Emas",
+      "goldSelection": "Pilihan Emas",
+      "goldList": "Daftar Emas",
+      "howToPurchase": "Cara Pembelian",
+      "pricing": "Harga",
+      "faq": "FAQ",
+      "verification": "Verifikasi"
+    },
+    "contact": {
+      "title": "Hubungi Kami",
+      "companyName": "PT KISA MULIA ABADI",
+      "address": "Prosperity Tower 21F, Kawasan District 8, SCBD Lot. 13 Jl. Jend. Sudirman Kav. 52-53, Jakarta Selatan, Indonesia",
+      "email": "Email:",
+      "emailAddress": "kisamuliaabadi@gmail.com",
+      "contactPerson": "Kontak Person:",
+      "phone": "+628516888 8877"
+    },
+    "bottom": {
+      "terms": "Syarat & Ketentuan",
+      "privacy": "Kebijakan Privasi",
+      "contactUs": "Hubungi Kami",
+      "copyright": "© {year} KisaGOLD™ Hak Cipta Dilindungi."
+    }
+  },
+  "verify": {
+    "title": "Verifikasi Keaslian<br>KISA24 Anda",
+    "description": "Masukkan Nomor Seri Emas Kisa24 Anda di bawah ini untuk mengautentikasi emas Anda melalui sistem verifikasi eksklusif kami, memastikan asal-usul dan prestisenya.",
+    "form": {
+      "serialNumber": "Masukkan nomor seri",
+      "privateKey": "Masukkan kunci privat",
+      "submit": "Verifikasi KISA24 Anda"
+    },
+    "images": {
+      "background": "Latar belakang verifikasi",
+      "gold": "Emas KISA24",
+      "flower": "Dekorasi bunga"
+    }
+  },
+  "common": {
+    "loading": "Memuat...",
+    "error": "Terjadi kesalahan",
+    "home": "Beranda",
+    "allRightsReserved": "Hak Cipta Dilindungi"
+  },
+  "productDetail": {
+    "image": {
+      "thumbnailAlt": "Gambar mini produk {index}",
+      "mainImageAlt": "Gambar utama produk"
+    },
+    "info": {
+      "logoAlt": "Logo KISA24",
+      "productName": "KISA24",
+      "fields": {
+        "type": "Tipe",
+        "netWeight": "Berat Bersih",
+        "dimensions": "Dimensi",
+        "purity": "Kemurnian",
+        "caseType": "Tipe Wadah",
+        "physicalSecurity": "Fitur Keamanan Fisik",
+        "digitalSecurity": "Fitur Keamanan Digital",
+        "quality": "Kualitas & Standar"
+      },
+      "values": {
+        "type": "KISA24 100gr",
+        "netWeight": "100gr",
+        "dimensions": "75mm x 45mm x 6mm",
+        "purity": "999.9",
+        "caseType": "Bingkai akrilik biru navy KISA24",
+        "physicalSecurity": "Penutupan magnetik presisi, segel hologram anti-rusak",
+        "digitalSecurity": "Kode seri unik, kunci privat, kode QR yang dapat diverifikasi melalui platform autentikasi online Kisagold",
+        "quality": "Diproduksi oleh pabrik penyulingan berlisensi SNI, diverifikasi oleh penilai bersertifikat. Jaminan pembelian kembali seumur hidup oleh PT Kisa Mulia Abadi."
+      },
+      "buttons": {
+        "inquire": "TANYAKAN SEKARANG",
+        "backToHome": "KEMBALI KE BERANDA"
+      }
+    },
+    "recommended": {
+      "title": "ANDA MUNGKIN JUGA SUKA",
+      "flowerAlt": "Dekorasi bunga",
+      "viewAllButton": "LIHAT SEMUA PRODUK",
+      "navigation": {
+        "previous": "Produk sebelumnya",
+        "next": "Produk berikutnya"
+      }
+    }
+  },
+  "shopByCategory": {
+    "title": "Belanja Berdasarkan Kategori",
+    "description": "Kami menawarkan harga paling kompetitif di pasar — tanpa mengorbankan kualitas, layanan, atau keaslian. Jaminan harga terbaik kami memastikan Anda mendapatkan nilai yang tak tertandingi, baik Anda memperluas koleksi atau melakukan investasi emas pertama Anda.",
+    "flowerAlt": "Logo Bunga",
+    "cards": {
+      "classic99": {
+        "title": "KISA24 Classic 99.99%",
+        "description": "Batangan emas bersertifikat SNI dengan kemurnian 99.99%. Dilindungi dengan fitur keamanan fisik & digital canggih dan jaminan pembelian kembali seumur hidup dari PT Kisa Mulia Abadi.",
+        "buttonText": "Jelajahi koleksi"
+      },
+      "classic24k": {
+        "title": "KISA24 Classic 24K",
+        "description": "Batangan emas dengan kemurnian 99.00%. Dilindungi dengan fitur keamanan fisik & digital canggih dan jaminan pembelian kembali seumur hidup dari PT Kisa Mulia Abadi.",
+        "buttonText": "Jelajahi koleksi"
+      },
+      "custom": {
+        "title": "KISA24 Custom",
+        "description": "Jadikan setiap perayaan benar-benar luar biasa dengan potongan personal yang siap pakai. Dilindungi dengan fitur keamanan fisik & digital canggih dan jaminan pembelian kembali seumur hidup dari PT Kisa Mulia Abadi.",
+        "buttonText": "Tanyakan Sekarang"
+      },
+      "comingSoon": {
+        "title": "Segera Hadir",
+        "description": "Dari tangan pembuat artisan ke tangan Anda, jadilah yang pertama tahu ketika kami meluncurkan koleksi terbaru kami. Bersiaplah untuk jatuh cinta.",
+        "buttonText": "Tanyakan Sekarang"
+      }
+    },
+    "navigation": {
+      "previous": "Kategori sebelumnya",
+      "next": "Kategori berikutnya"
+    }
+  },
+  "heroCarousel": {
+    "slides": {
+      "goldenBond": {
+        "title": "Golden Bond",
+        "price": "Rp 263.321.400",
+        "description": "Dari tangan Anda ke tangan mereka—hadiah yang tak pernah kehilangan kilaunya. Warisan yang bertahan lintas generasi.",
+        "buttonText": "Tanyakan sekarang"
+      }
+    },
+    "images": {
+      "alt": "{title}"
+    },
+    "navigation": {
+      "goToSlide": "Ke slide {number}"
+    }
+  },
+  "productSelection": {
+    "title": "Product Selection",
+    "description": "Setiap batangan emas KISA24 dapat dilacak sepenuhnya—dari asal geologisnya di Papua hingga pemurnian akhir dan pengiriman. Seluruh proses dilakukan oleh entitas afiliasi berlisensi kami, memastikan keaslian di setiap langkah.",
+    "categories": {
+      "all": "Semua Produk",
+      "classic99": "KISA24 Classic 99.99%",
+      "classic24k": "KISA24 Classic 24K",
+      "custom": "KISA24 Custom"
+    },
+    "viewAllButton": "LIHAT SEMUA PRODUK"
+  }
+}
