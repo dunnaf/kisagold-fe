@@ -72,7 +72,7 @@ const { t } = useLanguage()
 const router = useRouter()
 
 // ==================== State ====================
-const activeCategory = ref('classic-99')
+const activeCategory = ref('all')
 const productsContainer = ref(null)
 const canScrollLeft = ref(false)
 const canScrollRight = ref(false)
@@ -321,7 +321,6 @@ onUnmounted(() => {
 .category-tab.active {
   color: #FFFFFF;
   background: #173760;
-  box-shadow: 0 4px 12px rgba(23, 55, 96, 0.2);
 }
 
 /* ==================== Products Carousel ==================== */

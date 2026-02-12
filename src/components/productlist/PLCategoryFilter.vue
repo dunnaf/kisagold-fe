@@ -107,20 +107,24 @@ const selectSubCategory = (subCategoryId) => {
 <style scoped>
 /* ==================== Mobile Category Pills ==================== */
 .category-pill {
-  @apply flex-shrink-0 px-6 py-2.5 rounded-full border-none cursor-pointer whitespace-nowrap;
-  @apply font-assistant font-normal text-sm transition-all duration-300;
-  background-color: transparent;
-  color: #223422;
+  @apply flex-shrink-0 px-4 py-2 rounded-full border-none cursor-pointer whitespace-nowrap;
+  @apply font-trajan font-bold text-xs transition-all duration-300;
+  color: #173760;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .category-pill.active {
-  @apply font-semibold;
-  background-color: #173760;
   color: #FFFFFF;
+  background: #173760;
 }
 
 .category-pill:hover:not(.active) {
-  background-color: rgba(23, 55, 96, 0.1);
+  background: rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.category-pill:active:not(.active) {
+  transform: translateY(0);
 }
 
 /* ==================== Mobile Subcategory Pills ==================== */
