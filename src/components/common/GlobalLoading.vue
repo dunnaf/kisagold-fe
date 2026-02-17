@@ -34,12 +34,8 @@ const logoSrc = computed(() => '/images/logo-dark.png')
 
 // ==================== Watchers ====================
 watch(isLoading, (newVal) => {
-  if (newVal) {
-    document.body.style.overflow = 'hidden'
-  } else {
-    document.body.style.overflow = ''
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
+  document.body.style.overflow = newVal ? 'hidden' : ''
+  // Scroll position is managed by the router's scrollBehavior — do not reset here
 })
 </script>
 
@@ -116,5 +112,4 @@ watch(isLoading, (newVal) => {
 .fade-leave-from {
   opacity: 1;
 }
-
 </style>

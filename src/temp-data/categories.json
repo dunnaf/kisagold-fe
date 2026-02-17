@@ -32,7 +32,7 @@
         "id": "Lihat koleksi"
       },
       "hasDropdown": false,
-      "bgImage": "/images/pl-hero-bg-desktop.png",
+      "bgImage": "/images/category-image-1.png",
       "isActive": true,
       "sortOrder": 1,
       "purity": "99.0",
@@ -54,7 +54,7 @@
         "id": "Lihat koleksi"
       },
       "hasDropdown": false,
-      "bgImage": "/images/pl-hero-bg-desktop.png",
+      "bgImage": "/images/category-image-2.png",
       "isActive": true,
       "sortOrder": 2,
       "purity": "999.9",
@@ -76,7 +76,7 @@
         "id": "Hubungi Kami"
       },
       "hasDropdown": false,
-      "bgImage": "/images/pl-hero-bg-desktop.png",
+      "bgImage": "/images/category-image-3.png",
       "isActive": true,
       "sortOrder": 3
     }

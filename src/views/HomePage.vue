@@ -1,11 +1,11 @@
 <template>
   <AppLayout>
     <HPHeroCarousel v-if="isLoaded" />
-    <HPShopByCategory v-if="isLoaded" />
-    <HPProductSelection v-if="isLoaded" />
-    <HPArchipelago v-if="isLoaded" />
+    <HPShopByCategory id="category" v-if="isLoaded" />
+    <HPProductSelection id="products" v-if="isLoaded" />
+    <HPArchipelago id="about" v-if="isLoaded" />
     <HPWhyChoose v-if="isLoaded" />
-    <HPPriceTable v-if="isLoaded" />
+    <HPPriceTable id="price" v-if="isLoaded" />
     <HowToPurchase v-if="isLoaded" />
     <HPFaq v-if="isLoaded" />
   </AppLayout>

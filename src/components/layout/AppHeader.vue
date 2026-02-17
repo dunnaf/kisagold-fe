@@ -23,15 +23,10 @@
 
           <!-- Desktop Navigation Links -->
           <nav class="hidden xl:flex items-center space-x-8">
-            <template v-for="item in navItems" :key="item.path">
-              <router-link v-if="!item.disabled" :to="item.path" class="nav-link"
-                :style="{ color: isScrolled ? '#173760' : '#FCFDF5' }">
-                {{ item.label }}
-              </router-link>
-              <span v-else class="nav-link nav-link-disabled" :style="{ color: isScrolled ? '#173760' : '#FCFDF5' }">
-                {{ item.label }}
-              </span>
-            </template>
+            <router-link v-for="item in navItems" :key="item.to.hash" :to="item.to" class="nav-link"
+              :style="{ color: isScrolled ? '#173760' : '#FCFDF5' }">
+              {{ item.label }}
+            </router-link>
           </nav>
         </div>
 
@@ -97,22 +92,14 @@
 
           <!-- Navigation Links -->
           <nav class="mobile-nav-wrapper">
-            <template v-for="item in navItems" :key="item.path">
-              <router-link v-if="!item.disabled" :to="item.path" @click="closeMobileMenu" class="mobile-nav-link">
-                <span class="mobile-nav-link-text">{{ item.label }}</span>
-                <svg class="mobile-nav-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </router-link>
-              <div v-else class="mobile-nav-link mobile-nav-link-disabled">
-                <span class="mobile-nav-link-text">{{ item.label }}</span>
-                <svg class="mobile-nav-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </div>
-            </template>
+            <router-link v-for="item in navItems" :key="item.to.hash" :to="item.to" @click="closeMobileMenu"
+              class="mobile-nav-link">
+              <span class="mobile-nav-link-text">{{ item.label }}</span>
+              <svg class="mobile-nav-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </router-link>
           </nav>
 
           <!-- Decorative Flower Icon -->
@@ -134,10 +121,10 @@ const { currentLanguage, availableLanguages, changeLanguage, t } = useLanguage()
 
 // ==================== Configuration ====================
 const navItems = computed(() => [
-  { path: '/about', label: t('nav.about'), disabled: true },
-  { path: '/products', label: t('nav.products'), disabled: false },
-  { path: '/category', label: t('nav.category'), disabled: true },
-  { path: '/price', label: t('nav.price'), disabled: true }
+  { to: { path: '/', hash: '#about' }, label: t('nav.about') },
+  { to: { path: '/', hash: '#products' }, label: t('nav.products') },
+  { to: { path: '/', hash: '#category' }, label: t('nav.category') },
+  { to: { path: '/', hash: '#price' }, label: t('nav.price') }
 ])
 
 // ==================== State ====================
@@ -249,9 +236,6 @@ onUnmounted(() => {
   transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1), opacity 300ms ease;
 }
 
-.nav-link-disabled {
-  pointer-events: none;
-}
 
 /* ==================== Mobile Menu Button ==================== */
 .hamburger-line {
@@ -313,9 +297,6 @@ onUnmounted(() => {
   @apply border-2 border-transparent;
 }
 
-.mobile-nav-link-disabled {
-  pointer-events: none;
-}
 
 .mobile-nav-link-text {
   @apply font-trajan font-bold text-2xl tracking-wide;
