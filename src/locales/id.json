@@ -189,10 +189,22 @@
   },
   "heroCarousel": {
     "slides": {
-      "goldenBond": {
-        "title": "Golden Bond",
+      "kisa24": {
+        "title": "KISA24",
         "price": "Rp 263.321.400",
         "description": "Dari tangan Anda ke tangan mereka—hadiah yang tak pernah kehilangan kilaunya. Warisan yang bertahan lintas generasi.",
+        "buttonText": "Tanyakan sekarang"
+      },
+      "legacyPreserved": {
+        "title": "Warisan Terjaga",
+        "price": "Rp 263.321.400",
+        "description": "Setiap langkah kecil hari ini, dilindungi oleh cinta yang kamu tinggalkan. Karena cinta tidak berakhir—ia diteruskan.",
+        "buttonText": "Tanyakan sekarang"
+      },
+      "perfectForGift": {
+        "title": "Sempurna Untuk Hadiah",
+        "price": "Rp 263.321.400",
+        "description": "Setiap langkah kecil hari ini, dilindungi oleh cinta yang kamu tinggalkan. Karena cinta tidak berakhir—ia diteruskan.",
         "buttonText": "Tanyakan sekarang"
       }
     },
@@ -204,7 +216,7 @@
     }
   },
   "productSelection": {
-    "title": "Product Selection",
+    "title": "Pilihan Produk",
     "description": "Setiap batangan emas KISA24 dapat dilacak sepenuhnya—dari asal geologisnya di Papua hingga pemurnian akhir dan pengiriman. Seluruh proses dilakukan oleh entitas afiliasi berlisensi kami, memastikan keaslian di setiap langkah.",
     "categories": {
       "all": "Semua Produk",
@@ -248,7 +260,7 @@
     "inquireButton": "TANYAKAN SEKARANG"
   },
   "howToPurchase": {
-    "title": "How To Purchase",
+    "title": "Cara Pembelian",
     "description": "Lorem ipsum dolor sit amet consectetur. A risus in ultrices mi eu. Pellentesque aenean quis sit ultricies tellus in velit et. Purus pretium tellus pharetra ac fringilla. Mattis nibh gravida sed elementum urna.",
     "handImage": {
       "alt": "Gambar Tangan"
@@ -280,8 +292,8 @@
     "flowerLogo": {
       "alt": "Logo Bunga KISA24"
     },
-    "title": "Why Choose KISAGOLD?",
-    "description": "At Kisagold, every piece is crafted with exclusivity in mind. To maintain our high standards of personalization and service, purchases are made through direct consultation.",
+    "title": "Mengapa Memilih KISAGOLD?",
+    "description": "Di Kisagold, setiap produk dirancang dengan mengutamakan eksklusivitas. Untuk menjaga standar personalisasi dan layanan kami yang tinggi, pembelian dilakukan melalui konsultasi langsung.",
     "features": {
       "1": {
         "iconAlt": "Ikon Likuiditas Terjamin",

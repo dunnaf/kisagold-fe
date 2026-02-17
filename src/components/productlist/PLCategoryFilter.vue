@@ -53,9 +53,10 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { useLanguage } from '@/composables/useLanguage'
+import { getCategories, getSubCategories } from '@/temp-data/db.js'
 
 // ==================== i18n Setup ====================
-const { t } = useLanguage()
+const { locale } = useLanguage()
 
 // ==================== Props ====================
 const props = defineProps({
@@ -73,20 +74,21 @@ const activeCategory = ref(props.modelValue)
 const activeSubCategory = ref('all-custom')
 
 // ==================== Computed ====================
-const categories = computed(() => [
-  { id: 'all', name: t('productList.categories.all'), hasDropdown: false },
-  { id: 'classic-99', name: t('productList.categories.classic99'), hasDropdown: false },
-  { id: 'classic-24k', name: t('productList.categories.classic24k'), hasDropdown: false },
-  { id: 'custom', name: t('productList.categories.custom'), hasDropdown: true }
-])
+// Names come directly from categories.json — no hardcoded key maps needed
+const categories = computed(() =>
+  getCategories().map(cat => ({
+    id: cat.id,
+    name: cat.name[locale.value] ?? cat.name.en,
+    hasDropdown: cat.hasDropdown
+  }))
+)
 
-const subCategories = computed(() => [
-  { id: 'all-custom', name: t('productList.subCategories.all') },
-  { id: 'lunar-new-year', name: t('productList.subCategories.lunarNewYear') },
-  { id: 'eid', name: t('productList.subCategories.eid') },
-  { id: 'hampers', name: t('productList.subCategories.hampers') },
-  { id: 'gift-box', name: t('productList.subCategories.giftBox') }
-])
+const subCategories = computed(() =>
+  getSubCategories('custom').map(sub => ({
+    id: sub.id,
+    name: sub.name[locale.value] ?? sub.name.en
+  }))
+)
 
 // ==================== Category Methods ====================
 const selectCategory = (categoryId) => {

@@ -1,0 +1,34 @@
+{
+  "updatedAt": "2026-02-10T09:30:00+07:00",
+  "groups": [
+    {
+      "categoryId": "24k",
+      "label": {
+        "en": "24K (99% purity)",
+        "id": "24K (kemurnian 99%)"
+      },
+      "rows": [
+        { "weight": "1 gr",   "buyPrice": 2943000,   "buybackPrice": 2650000  },
+        { "weight": "5 gr",   "buyPrice": 14420000,  "buybackPrice": 13250000 },
+        { "weight": "10 gr",  "buyPrice": 28763000,  "buybackPrice": 26500000 },
+        { "weight": "25 gr",  "buyPrice": 71644000,  "buybackPrice": 66250000 },
+        { "weight": "50 gr",  "buyPrice": 143000000, "buybackPrice": 132500000 },
+        { "weight": "100 gr", "buyPrice": 285900000, "buybackPrice": 265000000 }
+      ]
+    },
+    {
+      "categoryId": "999-99",
+      "label": {
+        "en": "999.9 (SNI-certified)",
+        "id": "999.9 (bersertifikat SNI)"
+      },
+      "rows": [
+        { "weight": "1 gr",   "buyPrice": 2960000,   "buybackPrice": 2680000  },
+        { "weight": "5 gr",   "buyPrice": 14600000,  "buybackPrice": 13400000 },
+        { "weight": "10 gr",  "buyPrice": 29000000,  "buybackPrice": 26800000 },
+        { "weight": "25 gr",  "buyPrice": 72300000,  "buybackPrice": 67000000 },
+        { "weight": "100 gr", "buyPrice": 287500000, "buybackPrice": 268000000 }
+      ]
+    }
+  ]
+}

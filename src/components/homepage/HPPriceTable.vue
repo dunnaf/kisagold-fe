@@ -41,25 +41,16 @@
 
           <!-- Table Body -->
           <tbody>
-            <!-- Classic 24K (99% purity) Group -->
-            <tr class="table-group-header">
-              <td colspan="3">{{ t('priceTable.classic24k') }}</td>
-            </tr>
-            <tr v-for="item in classic24kPrices" :key="`24k-${item.weight}`" class="table-row">
-              <td>{{ item.weight }}</td>
-              <td>{{ formatPrice(item.buyPrice) }}</td>
-              <td>{{ formatPrice(item.buybackPrice) }}</td>
-            </tr>
-
-            <!-- Classic 99.9 (SNI-certified) Group -->
-            <tr class="table-group-header">
-              <td colspan="3">{{ t('priceTable.classic999') }}</td>
-            </tr>
-            <tr v-for="item in classic999Prices" :key="`999-${item.weight}`" class="table-row">
-              <td>{{ item.weight }}</td>
-              <td>{{ formatPrice(item.buyPrice) }}</td>
-              <td>{{ formatPrice(item.buybackPrice) }}</td>
-            </tr>
+            <template v-for="group in priceGroups" :key="group.categoryId">
+              <tr class="table-group-header">
+                <td colspan="3">{{ group.label }}</td>
+              </tr>
+              <tr v-for="row in group.rows" :key="`${group.categoryId}-${row.weight}`" class="table-row">
+                <td>{{ row.weight }}</td>
+                <td>{{ formatPrice(row.buyPrice) }}</td>
+                <td>{{ formatPrice(row.buybackPrice) }}</td>
+              </tr>
+            </template>
           </tbody>
         </table>
       </div>
@@ -75,42 +66,37 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
-import { useRouter } from 'vue-router'
+import { computed } from 'vue'
 import { useLanguage } from '@/composables/useLanguage'
+import { getPriceTable } from '@/temp-data/db.js'
+import { openWhatsApp } from '@/utils/whatsapp.js'
 
 // ==================== i18n Setup ====================
-const { t } = useLanguage()
+const { t, locale } = useLanguage()
 
-// ==================== Router ====================
-const router = useRouter()
 
-// ==================== Configuration ====================
-const priceData = {
-  classic24k: [
-    { weight: '1 gr', buyPrice: 2943000, buybackPrice: 2650000 },
-    { weight: '5 gr', buyPrice: 14420000, buybackPrice: 13250000 },
-    { weight: '10 gr', buyPrice: 28763000, buybackPrice: 26500000 },
-    { weight: '25 gr', buyPrice: 71644000, buybackPrice: 66250000 },
-    { weight: '50 gr', buyPrice: 143000000, buybackPrice: 132500000 },
-    { weight: '100 gr', buyPrice: 285900000, buybackPrice: 265000000 }
-  ],
-  classic999: [
-    { weight: '1 gr', buyPrice: 2960000, buybackPrice: 2680000 },
-    { weight: '5 gr', buyPrice: 14600000, buybackPrice: 13400000 },
-    { weight: '10 gr', buyPrice: 29000000, buybackPrice: 26800000 },
-    { weight: '25 gr', buyPrice: 72300000, buybackPrice: 67000000 },
-    { weight: '100 gr', buyPrice: 287500000, buybackPrice: 268000000 }
-  ]
-}
-
-// ==================== State ====================
-const classic24kPrices = ref(priceData.classic24k)
-const classic999Prices = ref(priceData.classic999)
+// ==================== Data ====================
+const priceTable = getPriceTable()
 
 // ==================== Computed ====================
+const priceGroups = computed(() =>
+  priceTable.groups.map(group => ({
+    ...group,
+    label: group.label[locale.value] ?? group.label.en
+  }))
+)
+
 const formattedDate = computed(() => {
-  return t('priceTable.date')
+  const date = new Date(priceTable.updatedAt)
+  const options = { day: 'numeric', month: 'short', year: 'numeric' }
+  const localeDateStr = date.toLocaleDateString(
+    locale.value === 'id' ? 'id-ID' : 'en-GB',
+    options
+  )
+  const hours = date.getHours().toString().padStart(2, '0')
+  const minutes = date.getMinutes().toString().padStart(2, '0')
+  const label = locale.value === 'id' ? 'Tanggal' : 'Date'
+  return `${label}: ${localeDateStr} ${hours}:${minutes} WIB`
 })
 
 // ==================== Methods ====================
@@ -119,7 +105,7 @@ const formatPrice = (price) => {
 }
 
 const handleInquire = () => {
-  router.push('/contact')
+  openWhatsApp()
 }
 </script>
 

@@ -23,31 +23,54 @@
         </div>
       </div>
 
-      <!-- Desktop: Product Carousel -->
-      <div class="products-carousel-wrapper">
-        <!-- Navigation Arrows -->
-        <button v-if="canScrollLeft" class="nav-arrow nav-arrow-left" @click="scrollLeft"
-          aria-label="Previous products">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true">
-            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      <!-- Empty State (shown when category has no products) -->
+      <div v-if="filteredProducts.length === 0" class="empty-state">
+        <div class="empty-state-content">
+          <svg class="empty-state-icon" width="80" height="80" viewBox="0 0 24 24" fill="none">
+            <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" />
           </svg>
-        </button>
+          <h3 class="empty-state-title">{{ t('productList.noProducts.title') }}</h3>
+          <p class="empty-state-description">{{ t('productList.noProducts.description') }}</p>
+        </div>
+      </div>
 
-        <!-- Products Container -->
-        <div ref="productsContainer" class="products-container" @scroll="handleScroll">
-          <ProductCard v-for="product in filteredProducts" :key="product.id" :product="product" class="product-item" />
+      <!-- Products (shown when there is data) -->
+      <template v-else>
+        <!-- Mobile: 2×2 grid — max 4 products -->
+        <div class="xl:hidden grid grid-cols-2 gap-4 mb-8">
+          <ProductCard v-for="product in mobileProducts" :key="product.id" :product="product" />
         </div>
 
-        <button v-if="canScrollRight" class="nav-arrow nav-arrow-right" @click="scrollRight" aria-label="Next products">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true">
-            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-        </button>
-      </div>
+        <!-- Desktop: Carousel row — max 3 products -->
+        <div class="hidden xl:block products-carousel-wrapper">
+          <!-- Navigation Arrows -->
+          <button v-if="canScrollLeft" class="nav-arrow nav-arrow-left" @click="scrollLeft"
+            aria-label="Previous products">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+
+          <!-- Products Container -->
+          <div ref="productsContainer" class="products-container" @scroll="handleScroll">
+            <ProductCard v-for="product in desktopProducts" :key="product.id" :product="product" class="product-item" />
+          </div>
+
+          <button v-if="canScrollRight" class="nav-arrow nav-arrow-right" @click="scrollRight"
+            aria-label="Next products">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+      </template>
 
       <!-- View All Button -->
       <div class="button-wrapper">
@@ -64,121 +87,45 @@ import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useLanguage } from '@/composables/useLanguage'
 import ProductCard from '@/components/common/ProductCard.vue'
+import { getProducts, getCategories } from '@/temp-data/db.js'
 
 // ==================== i18n Setup ====================
-const { t } = useLanguage()
+const { t, locale } = useLanguage()
 
 // ==================== Router ====================
 const router = useRouter()
 
+// ==================== Configuration ====================
+// Exclude the "all" meta-category — this section shows per-category tabs only
+const categories = computed(() =>
+  getCategories()
+    .filter(cat => cat.id !== 'all')
+    .map(cat => ({
+      id: cat.id,
+      name: cat.name[locale.value] ?? cat.name.en
+    }))
+)
+
 // ==================== State ====================
-const activeCategory = ref('all')
+// Default to the first real category
+const activeCategory = ref(categories.value[0]?.id ?? '')
 const productsContainer = ref(null)
 const canScrollLeft = ref(false)
 const canScrollRight = ref(false)
 
-// ==================== Configuration ====================
-const categories = computed(() => [
-  {
-    id: 'all',
-    name: t('productSelection.categories.all')
-  },
-  {
-    id: 'classic-99',
-    name: t('productSelection.categories.classic99')
-  },
-  {
-    id: 'classic-24k',
-    name: t('productSelection.categories.classic24k')
-  },
-  {
-    id: 'custom',
-    name: t('productSelection.categories.custom')
-  }
-])
-
 // ==================== Products Data ====================
-// TODO: Replace with API call
-const products = ref([
-  {
-    id: 1,
-    name: 'KISA24 100GR',
-    price: 263321400,
-    image: '/images/dummy-product-image.png',
-    category: 'all'
-  },
-  {
-    id: 2,
-    name: 'KISA24 100GR',
-    price: 263321400,
-    image: '/images/dummy-product-image.png',
-    category: 'all'
-  },
-  {
-    id: 3,
-    name: 'KISA24 100GR',
-    price: 263321400,
-    image: '/images/dummy-product-image.png',
-    category: 'all'
-  },
-  {
-    id: 4,
-    name: 'KISA24 50GR',
-    price: 131660700,
-    image: '/images/dummy-product-image.png',
-    category: 'classic-99'
-  },
-  {
-    id: 5,
-    name: 'KISA24 100GR',
-    price: 263321400,
-    image: '/images/dummy-product-image.png',
-    category: 'classic-99'
-  },
-  {
-    id: 6,
-    name: 'KISA24 250GR',
-    price: 658303500,
-    image: '/images/dummy-product-image.png',
-    category: 'classic-99'
-  },
-  {
-    id: 7,
-    name: 'KISA24 50GR 24K',
-    price: 130000000,
-    image: '/images/dummy-product-image.png',
-    category: 'classic-24k'
-  },
-  {
-    id: 8,
-    name: 'KISA24 100GR 24K',
-    price: 260000000,
-    image: '/images/dummy-product-image.png',
-    category: 'classic-24k'
-  },
-  {
-    id: 9,
-    name: 'KISA24 Custom Gift Set',
-    price: 300000000,
-    image: '/images/dummy-product-image.png',
-    category: 'custom'
-  },
-  {
-    id: 10,
-    name: 'KISA24 Custom Hampers',
-    price: 350000000,
-    image: '/images/dummy-product-image.png',
-    category: 'custom'
-  }
-])
+const allProducts = getProducts()
 
 // ==================== Computed ====================
-const filteredProducts = computed(() => {
-  if (activeCategory.value === 'all') {
-    return products.value.filter(product => product.category === 'all')
-  }
-  return products.value.filter(product => product.category === activeCategory.value)
-})
+const filteredProducts = computed(() =>
+  allProducts.filter(product => product.categoryId === activeCategory.value)
+)
+
+// Desktop shows max 3 products (fits a 3-column row without scrolling)
+const desktopProducts = computed(() => filteredProducts.value.slice(0, 3))
+
+// Mobile shows max 4 products (2×2 grid)
+const mobileProducts = computed(() => filteredProducts.value.slice(0, 4))
 
 // ==================== Category Methods ====================
 const setActiveCategory = (categoryId) => {
@@ -363,6 +310,31 @@ onUnmounted(() => {
 
 .nav-arrow-right {
   @apply -right-6;
+}
+
+/* ==================== Empty State ==================== */
+.empty-state {
+  @apply flex items-center justify-center w-full min-h-[260px] xl:min-h-[320px] mb-8 xl:mb-12;
+}
+
+.empty-state-content {
+  @apply flex flex-col items-center justify-center text-center max-w-md px-6;
+}
+
+.empty-state-icon {
+  @apply mb-6 opacity-40;
+  color: #173760;
+}
+
+.empty-state-title {
+  @apply font-trajan font-bold text-xl xl:text-2xl mb-3;
+  color: #173760;
+}
+
+.empty-state-description {
+  @apply font-assistant font-normal text-sm xl:text-base leading-relaxed;
+  color: #223422;
+  opacity: 0.8;
 }
 
 /* ==================== View All Button ==================== */

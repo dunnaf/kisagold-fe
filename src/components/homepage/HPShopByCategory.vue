@@ -34,10 +34,7 @@
             </div>
 
             <!-- Previous Arrow -->
-            <button 
-              class="carousel-arrow carousel-arrow-prev" 
-              @click="prevSlide" 
-              :disabled="isAtStart"
+            <button class="carousel-arrow carousel-arrow-prev" @click="prevSlide" :disabled="isAtStart"
               :aria-label="t('shopByCategory.navigation.previous')">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2" stroke-linecap="round"
@@ -46,10 +43,7 @@
             </button>
 
             <!-- Next Arrow -->
-            <button 
-              class="carousel-arrow carousel-arrow-next" 
-              @click="nextSlide"
-              :disabled="isAtEnd" 
+            <button class="carousel-arrow carousel-arrow-next" @click="nextSlide" :disabled="isAtEnd"
               :aria-label="t('shopByCategory.navigation.next')">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M9 18L15 12L9 6" stroke="white" stroke-width="2" stroke-linecap="round"
@@ -61,10 +55,7 @@
 
         <!-- Desktop Grid -->
         <div class="desktop-grid hidden xl:grid">
-          <div 
-            v-for="(card, index) in categoryCards" 
-            :key="index" 
-            class="product-card"
+          <div v-for="(card, index) in categoryCards" :key="index" class="product-card"
             :style="{ backgroundImage: `url(${card.bgImage})` }">
             <div class="card-content">
               <h3 class="card-title">{{ card.title }}</h3>
@@ -86,55 +77,37 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import { useRouter } from 'vue-router'
 import { useLanguage } from '@/composables/useLanguage'
+import { getCategories } from '@/temp-data/db.js'
+import { openWhatsApp } from '@/utils/whatsapp.js'
 
 // ==================== i18n Setup ====================
-const { t } = useLanguage()
+const { t, locale } = useLanguage()
+
+// ==================== Router ====================
+const router = useRouter()
 
 // ==================== Configuration ====================
 const CARD_WIDTH = 250 // Static card width in pixels
 const CARD_GAP = 8 // Gap between cards in pixels
-const CATEGORY_IMAGES = {
-  classic99: '/images/pl-hero-bg-desktop.png',
-  classic24k: '/images/pl-hero-bg-desktop.png',
-  custom: '/images/pl-hero-bg-desktop.png',
-  comingSoon: '/images/pl-hero-bg-desktop.png'
-}
 
 // ==================== State ====================
 const currentIndex = ref(0)
 
 // ==================== Computed ====================
-const categoryCards = computed(() => [
-  {
-    type: 'classic99',
-    title: t('shopByCategory.cards.classic99.title'),
-    description: t('shopByCategory.cards.classic99.description'),
-    buttonText: t('shopByCategory.cards.classic99.buttonText'),
-    bgImage: CATEGORY_IMAGES.classic99
-  },
-  {
-    type: 'classic24k',
-    title: t('shopByCategory.cards.classic24k.title'),
-    description: t('shopByCategory.cards.classic24k.description'),
-    buttonText: t('shopByCategory.cards.classic24k.buttonText'),
-    bgImage: CATEGORY_IMAGES.classic24k
-  },
-  {
-    type: 'custom',
-    title: t('shopByCategory.cards.custom.title'),
-    description: t('shopByCategory.cards.custom.description'),
-    buttonText: t('shopByCategory.cards.custom.buttonText'),
-    bgImage: CATEGORY_IMAGES.custom
-  },
-  {
-    type: 'comingSoon',
-    title: t('shopByCategory.cards.comingSoon.title'),
-    description: t('shopByCategory.cards.comingSoon.description'),
-    buttonText: t('shopByCategory.cards.comingSoon.buttonText'),
-    bgImage: CATEGORY_IMAGES.comingSoon
-  }
-])
+// Built fully from categories.json — no hardcoded keys or image maps needed
+const categoryCards = computed(() =>
+  getCategories()
+    .filter(cat => cat.id !== 'all')
+    .map(cat => ({
+      type: cat.id,
+      title: cat.name[locale.value] ?? cat.name.en,
+      description: cat.description[locale.value] ?? cat.description.en,
+      buttonText: cat.buttonText[locale.value] ?? cat.buttonText.en,
+      bgImage: cat.bgImage
+    }))
+)
 
 const carouselTransform = computed(() => {
   const offset = currentIndex.value * (CARD_WIDTH + CARD_GAP)
@@ -159,9 +132,12 @@ const prevSlide = () => {
 }
 
 // ==================== Card Click Handler ====================
-const handleCardClick = (cardType) => {
-  // TODO: Implement navigation or modal logic
-  console.log(`Card clicked: ${cardType}`)
+const handleCardClick = (categoryId) => {
+  if (categoryId === 'custom') {
+    openWhatsApp()
+  } else {
+    router.push({ path: '/products', query: { category: categoryId } })
+  }
 }
 </script>
 

@@ -75,10 +75,11 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, computed, inject, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useLanguage } from '@/composables/useLanguage'
 import ProductCard from '../common/ProductCard.vue'
+import { getRecommendedProducts } from '@/temp-data/db.js'
 
 // ==================== i18n Setup ====================
 const { t } = useLanguage()
@@ -97,46 +98,14 @@ const carouselRef = ref(null)
 const slideWidth = ref(0)
 const itemsPerSlide = ref(3)
 
-// ==================== Sample Data ====================
-// TODO: Replace with actual API call or props
-const recommendedProducts = ref([
-  {
-    id: 1,
-    name: 'KISA24 100GR',
-    price: 263321400,
-    image: '/images/dummy-product-image.png'
-  },
-  {
-    id: 2,
-    name: 'KISA24 100GR',
-    price: 263321400,
-    image: '/images/dummy-product-image.png'
-  },
-  {
-    id: 3,
-    name: 'KISA24 100GR',
-    price: 263321400,
-    image: '/images/dummy-product-image.png'
-  },
-  {
-    id: 4,
-    name: 'KISA24 100GR',
-    price: 263321400,
-    image: '/images/dummy-product-image.png'
-  },
-  {
-    id: 5,
-    name: 'KISA24 100GR',
-    price: 263321400,
-    image: '/images/dummy-product-image.png'
-  },
-  {
-    id: 6,
-    name: 'KISA24 100GR',
-    price: 263321400,
-    image: '/images/dummy-product-image.png'
-  }
-])
+// ==================== Injected Data ====================
+// Provided by ProductDetailPage.vue
+const currentProduct = inject('currentProduct', null)
+
+// ==================== Products Data ====================
+const recommendedProducts = computed(() =>
+  getRecommendedProducts(currentProduct?.value?.id, 6)
+)
 
 // ==================== Computed ====================
 const maxSlide = computed(() => {

@@ -189,10 +189,22 @@
   },
   "heroCarousel": {
     "slides": {
-      "goldenBond": {
-        "title": "Golden Bond",
+      "kisa24": {
+        "title": "KISA24",
         "price": "Rp 263.321.400",
         "description": "From your hands to theirs—a gift that never loses its shine. A legacy that lasts for generations.",
+        "buttonText": "Inquire now"
+      },
+      "legacyPreserved": {
+        "title": "Legacy Preserved",
+        "price": "Rp 263.321.400",
+        "description": "Every small step today, safeguarded by the love you leave behind. Because love doesn't end—it's passed on.",
+        "buttonText": "Inquire now"
+      },
+      "perfectForGift": {
+        "title": "Perfect For Gift",
+        "price": "Rp 263.321.400",
+        "description": "Every small step today, safeguarded by the love you leave behind. Because love doesn't end—it's passed on.",
         "buttonText": "Inquire now"
       }
     },
@@ -239,10 +251,10 @@
   "priceTable": {
     "title": "Value Without Compromise",
     "description": "While gold may move with the market, trust remains constant. KISA24 comes with a best-in-market rate with a lifetime buyback guarantee — ensuring that our clients are supported not just at the point of purchase, but across the years to come.",
-    "date": "Tanggal: 10 Feb 2026 9:30 WIB",
-    "weightLabel": "Berat (gr)",
-    "buyPriceLabel": "Harga Beli (Rp)",
-    "buybackPriceLabel": "Harga Buyback (Rp)",
+    "date": "Date: 10 Feb 2026 9:30 WIB",
+    "weightLabel": "Weight (gr)",
+    "buyPriceLabel": "Buy Price (Rp)",
+    "buybackPriceLabel": "Buyback Price (Rp)",
     "classic24k": "KISA24 Classic — 24K (99% purity)",
     "classic999": "KISA24 Classic — 999.9 (SNI-certified)",
     "inquireButton": "INQUIRE NOW"
@@ -256,23 +268,23 @@
     "steps": {
       "1": {
         "iconAlt": "Step 1 Icon",
-        "title": "Hubungi Kami",
-        "description": "Hubungi kami melalui nomor WhatsApp kami (+62 8518 8888 877). Tim kami akan membantu terkait detail produk, harga, serta menjawab pertanyaan Anda."
+        "title": "Contact Us",
+        "description": "Reach us via our WhatsApp number (+62 8518 8888 877). Our team will assist you with product details, pricing, and answer any questions you may have."
       },
       "2": {
         "iconAlt": "Step 2 Icon",
-        "title": "Konfirmasi Order",
-        "description": "Konfirmasi pre-order dengan melakukan pembayaran uang muka (DP) untuk mengunci nilai transaksi Anda dan menerima invoice. Waktu tunggu pre-order maksimal 3 hari kerja."
+        "title": "Order Confirmation",
+        "description": "Confirm your pre-order by making a down payment (DP) to lock in your transaction value and receive an invoice. Pre-order waiting time is a maximum of 3 business days."
       },
       "3": {
         "iconAlt": "Step 3 Icon",
-        "title": "Emas Disiapkan",
-        "description": "Emas batangan Anda akan disiapkan, dilayir (assayer), dan disertifikasi dalam waktu 3 hari kerja. Setiap barang emas memiliki nomor ID unik untuk verifikasi & private key, diberikan dengan aman dalam database kami."
+        "title": "Gold Preparation",
+        "description": "Your gold bar will be prepared, assayed, and certified within 3 business days. Each gold item has a unique ID number for verification and a private key, securely stored in our database."
       },
       "4": {
         "iconAlt": "Step 4 Icon",
-        "title": "Pelunasan & Terima Emas",
-        "description": "Kami akan memberitahu Anda ketika KISA24 sudah siap untuk pelunasan penuh dan serah terima. Anda dapat mengambil emas di kantor pusat kami (Property Tower 21F, District 8) atau menerima pengiriman ke alamat Anda."
+        "title": "Full Payment & Receive Gold",
+        "description": "We will notify you when your KISA24 is ready for full payment and handover. You may collect the gold at our headquarters (Prosperity Tower 21F, District 8) or receive delivery to your address."
       }
     }
   },
@@ -285,23 +297,23 @@
     "features": {
       "1": {
         "iconAlt": "Guaranteed Liquidity Icon",
-        "title": "Liquiditas Terjamin",
-        "description": "Harga beli dan buyback terbaik di pasar, transparan setiap hari tanpa biaya tambahan apapun"
+        "title": "Guaranteed Liquidity",
+        "description": "Best buy and buyback rates in the market, transparently updated daily with no additional fees"
       },
       "2": {
         "iconAlt": "999.9 Gold Purity Icon",
-        "title": "Kadar Emas 999.9",
-        "description": "Kadar emas terjamin untuk edisi 24K maupun 999.9"
+        "title": "999.9 Gold Purity",
+        "description": "Guaranteed gold purity for both the 24K and 999.9 editions"
       },
       "3": {
-        "iconAlt": "Easy Authenticity Verification Icon",
-        "title": "Mudah Dicek Keasliannya",
-        "description": "Fitur keamanan lengkap, Dilengkapi QR code, hologram seal, proses verifikasi digital"
+        "iconAlt": "Verified Authentic Icon",
+        "title": "Verified Authentic",
+        "description": "Complete security features including a QR code, hologram seal, and digital verification process"
       },
       "4": {
         "iconAlt": "Artistic Design Icon",
-        "title": "Desain Artistik",
-        "description": "Kisagold hadir dengan desain yang artistik sehingga cocok dijadikan barang koleksi"
+        "title": "Artistic Design",
+        "description": "Kisagold features an artistic design, making it perfect as a collectible item"
       }
     }
   },

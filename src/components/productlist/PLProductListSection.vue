@@ -6,7 +6,8 @@
         <div class="hidden xl:flex xl:gap-8">
           <!-- Category Sidebar -->
           <aside class="category-sidebar-wrapper">
-            <PLCategoryFilter v-model="selectedCategory" />
+            <PLCategoryFilter :model-value="selectedCategory" @update:modelValue="onCategoryChange"
+              @update:subCategory="onSubCategoryChange" />
           </aside>
 
           <!-- Product Grid or Empty State -->
@@ -20,8 +21,10 @@
             <div v-else class="empty-state">
               <div class="empty-state-content">
                 <svg class="empty-state-icon" width="80" height="80" viewBox="0 0 24 24" fill="none">
-                  <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
                 </svg>
                 <h3 class="empty-state-title">{{ t('productList.noProducts.title') }}</h3>
                 <p class="empty-state-description">{{ t('productList.noProducts.description') }}</p>
@@ -34,7 +37,8 @@
         <div class="xl:hidden">
           <!-- Category Filter -->
           <div class="mb-6">
-            <PLCategoryFilter v-model="selectedCategory" />
+            <PLCategoryFilter :model-value="selectedCategory" @update:modelValue="onCategoryChange"
+              @update:subCategory="onSubCategoryChange" />
           </div>
 
           <!-- Product Grid -->
@@ -46,8 +50,10 @@
           <div v-else class="empty-state">
             <div class="empty-state-content">
               <svg class="empty-state-icon" width="80" height="80" viewBox="0 0 24 24" fill="none">
-                <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
               </svg>
               <h3 class="empty-state-title">{{ t('productList.noProducts.title') }}</h3>
               <p class="empty-state-description">{{ t('productList.noProducts.description') }}</p>
@@ -60,83 +66,57 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import { useLanguage } from '@/composables/useLanguage'
 import PLCategoryFilter from './PLCategoryFilter.vue'
 import ProductCard from '../common/ProductCard.vue'
+import { getProducts, getProductsByCategory, getProductsBySubCategory, getCategories } from '@/temp-data/db.js'
 
 // ==================== i18n Setup ====================
 const { t } = useLanguage()
 
+// ==================== Route ====================
+const route = useRoute()
+const router = useRouter()
+
+// ==================== Helpers ====================
+const validCategoryIds = getCategories().map(c => c.id)
+
+const sanitizeCategory = (val) =>
+  validCategoryIds.includes(val) ? val : 'all'
+
 // ==================== State ====================
-const selectedCategory = ref('all')
+// Derived from URL; falls back to 'all' for unknown values
+const selectedCategory = ref(sanitizeCategory(route.query.category))
+const selectedSubCategory = ref('all-custom')
+
+// Keep state in sync when URL changes (browser back/forward)
+watch(() => route.query.category, (val) => {
+  selectedCategory.value = sanitizeCategory(val)
+  selectedSubCategory.value = 'all-custom'
+})
+
+// ==================== Filter Handlers ====================
+const onCategoryChange = (categoryId) => {
+  selectedCategory.value = categoryId
+  selectedSubCategory.value = 'all-custom'
+  router.replace({ query: { category: categoryId } })
+}
+
+const onSubCategoryChange = (subCategoryId) => {
+  selectedSubCategory.value = subCategoryId
+}
 
 // ==================== Data ====================
-const products = ref([
-  {
-    id: 1,
-    name: 'KISA24 100GR',
-    price: 263321400,
-    image: '/images/dummy-product-image.png',
-    category: 'classic-99'
-  },
-  {
-    id: 2,
-    name: 'KISA24 100GR',
-    price: 263321400,
-    image: '/images/dummy-product-image.png',
-    category: 'classic-99'
-  },
-  {
-    id: 3,
-    name: 'KISA24 100GR',
-    price: 263321400,
-    image: '/images/dummy-product-image.png',
-    category: 'classic-99'
-  },
-  {
-    id: 4,
-    name: 'KISA24 100GR',
-    price: 263321400,
-    image: '/images/dummy-product-image.png',
-    category: 'classic-99'
-  },
-  {
-    id: 5,
-    name: 'KISA24 100GR',
-    price: 263321400,
-    image: '/images/dummy-product-image.png',
-    category: 'custom'
-  },
-  {
-    id: 6,
-    name: 'KISA24 100GR',
-    price: 263321400,
-    image: '/images/dummy-product-image.png',
-    category: 'custom'
-  },
-  {
-    id: 7,
-    name: 'KISA24 100GR',
-    price: 263321400,
-    image: '/images/dummy-product-image.png',
-    category: 'custom'
-  },
-  {
-    id: 8,
-    name: 'KISA24 100GR',
-    price: 263321400,
-    image: '/images/dummy-product-image.png',
-    category: 'custom'
-  }
-])
+const allProducts = getProducts()
 
 // ==================== Computed ====================
 const filteredProducts = computed(() => {
-  if (selectedCategory.value === 'all') {
-    return products.value
+  if (selectedCategory.value === 'custom' && selectedSubCategory.value !== 'all-custom') {
+    return getProductsBySubCategory(selectedSubCategory.value)
   }
-  return products.value.filter(product => product.category === selectedCategory.value)
+  return getProductsByCategory(selectedCategory.value)
 })
 </script>
 

@@ -3,7 +3,7 @@
     <!-- Product Header -->
     <div class="flex items-center gap-4">
       <img :src="logoSrc" :alt="t('productDetail.info.logoAlt')" class="logo-flower" />
-      <h1 class="product-title">{{ t('productDetail.info.productName') }}</h1>
+      <h1 class="product-title">{{ productName }}</h1>
     </div>
 
     <!-- Product Details Grid -->
@@ -12,22 +12,22 @@
       <div class="detail-section">
         <div class="detail-row">
           <span class="detail-label">{{ t('productDetail.info.fields.type') }}</span>
-          <span class="detail-value">{{ t('productDetail.info.values.type') }}</span>
+          <span class="detail-value">{{ details.type }}</span>
         </div>
 
         <div class="detail-row">
           <span class="detail-label">{{ t('productDetail.info.fields.netWeight') }}</span>
-          <span class="detail-value">{{ t('productDetail.info.values.netWeight') }}</span>
+          <span class="detail-value">{{ details.netWeight }}</span>
         </div>
 
         <div class="detail-row">
           <span class="detail-label">{{ t('productDetail.info.fields.dimensions') }}</span>
-          <span class="detail-value">{{ t('productDetail.info.values.dimensions') }}</span>
+          <span class="detail-value">{{ details.dimensions }}</span>
         </div>
 
         <div class="detail-row">
           <span class="detail-label">{{ t('productDetail.info.fields.purity') }}</span>
-          <span class="detail-value">{{ t('productDetail.info.values.purity') }}</span>
+          <span class="detail-value">{{ details.purity }}</span>
         </div>
       </div>
 
@@ -35,17 +35,17 @@
       <div class="detail-section">
         <div class="detail-row">
           <span class="detail-label">{{ t('productDetail.info.fields.caseType') }}</span>
-          <span class="detail-value">{{ t('productDetail.info.values.caseType') }}</span>
+          <span class="detail-value">{{ details.caseType }}</span>
         </div>
 
         <div class="detail-row">
           <span class="detail-label">{{ t('productDetail.info.fields.physicalSecurity') }}</span>
-          <span class="detail-value">{{ t('productDetail.info.values.physicalSecurity') }}</span>
+          <span class="detail-value">{{ details.physicalSecurity }}</span>
         </div>
 
         <div class="detail-row">
           <span class="detail-label">{{ t('productDetail.info.fields.digitalSecurity') }}</span>
-          <span class="detail-value">{{ t('productDetail.info.values.digitalSecurity') }}</span>
+          <span class="detail-value">{{ details.digitalSecurity }}</span>
         </div>
       </div>
 
@@ -53,7 +53,7 @@
       <div class="detail-section">
         <div class="detail-row">
           <span class="detail-label">{{ t('productDetail.info.fields.quality') }}</span>
-          <span class="detail-value">{{ t('productDetail.info.values.quality') }}</span>
+          <span class="detail-value">{{ details.quality }}</span>
         </div>
       </div>
     </div>
@@ -71,23 +71,54 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, inject } from 'vue'
 import { useRouter } from 'vue-router'
 import { useLanguage } from '@/composables/useLanguage'
+import { openWhatsApp } from '@/utils/whatsapp.js'
 
 // ==================== i18n Setup ====================
-const { t } = useLanguage()
+const { t, locale } = useLanguage()
 
 // ==================== Router ====================
 const router = useRouter()
 
+// ==================== Injected Data ====================
+// Provided by ProductDetailPage.vue
+const currentProduct = inject('currentProduct', null)
+
 // ==================== Computed ====================
 const logoSrc = computed(() => '/images/flower.svg')
 
+const productName = computed(() =>
+  currentProduct?.value?.name ?? t('productDetail.info.productName')
+)
+
+const details = computed(() => {
+  const d = currentProduct?.value?.details
+  const lang = locale.value
+
+  // Resolve a field that may be a plain string or a { en, id } object
+  const loc = (field, fallback) => {
+    if (!field) return fallback
+    if (typeof field === 'object') return field[lang] ?? field.en ?? fallback
+    return field
+  }
+
+  return {
+    type:             loc(d?.type,             t('productDetail.info.values.type')),
+    netWeight:        loc(d?.netWeight,        t('productDetail.info.values.netWeight')),
+    dimensions:       loc(d?.dimensions,       t('productDetail.info.values.dimensions')),
+    purity:           loc(d?.purity,           t('productDetail.info.values.purity')),
+    caseType:         loc(d?.caseType,         t('productDetail.info.values.caseType')),
+    physicalSecurity: loc(d?.physicalSecurity, t('productDetail.info.values.physicalSecurity')),
+    digitalSecurity:  loc(d?.digitalSecurity,  t('productDetail.info.values.digitalSecurity')),
+    quality:          loc(d?.quality,          t('productDetail.info.values.quality'))
+  }
+})
+
 // ==================== Methods ====================
 const handleInquire = () => {
-  // TODO: Implement inquiry form or scroll to contact section
-  console.log('Inquire button clicked')
+  openWhatsApp()
 }
 
 const goToHomepage = () => {

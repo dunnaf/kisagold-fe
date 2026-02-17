@@ -32,9 +32,9 @@
                   </h1>
 
                   <!-- Price -->
-                  <p class="carousel-price">
+                  <!-- <p class="carousel-price">
                     {{ currentSlideData.price }}
-                  </p>
+                  </p> -->
                 </div>
 
                 <!-- Description -->
@@ -46,7 +46,8 @@
                 <button class="cta-button" :style="{
                   backgroundColor: currentSlideData.buttonBg,
                   color: currentSlideData.buttonTextColor
-                }" :aria-label="`${currentSlideData.buttonText} - ${currentSlideData.title}`">
+                }" :aria-label="`${currentSlideData.buttonText} - ${currentSlideData.title}`"
+                  @click="openWhatsApp()">
                   {{ currentSlideData.buttonText }}
                 </button>
               </div>
@@ -67,6 +68,7 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { openWhatsApp } from '@/utils/whatsapp.js'
 
 // ==================== i18n ====================
 const { t } = useI18n()
@@ -75,29 +77,32 @@ const { t } = useI18n()
 const AUTOPLAY_INTERVAL = 5000 // 5 seconds
 const SLIDES_CONFIG = [
   {
+    key: 'kisa24',
     bgImage: '/images/homepage-carousel-1.jpg',
     productImage: '/images/dummy-product-image.png',
     gradientBg: 'linear-gradient(to top, rgba(23, 55, 96, 1) 0%, rgba(23, 55, 96, 1) 40%, rgba(23, 55, 96, 0) 80%)',
     titleColor: '#CEB08A',
     buttonBg: '#CEB08A',
-    buttonTextColor: '#FCFDF5'
+    buttonTextColor: '#173760'
   },
   {
+    key: 'legacyPreserved',
     bgImage: '/images/homepage-carousel-2.jpg',
     productImage: '/images/dummy-product-image.png',
     gradientBg: 'linear-gradient(to top, rgba(41, 32, 16, 1) 0%, rgba(41, 32, 16, 1) 40%, rgba(41, 32, 16, 0) 80%)',
     titleColor: '#FCFDF5',
-    buttonBg: '#173760',
-    buttonTextColor: '#FCFDF5'
+    buttonBg: '#CEB08A',
+    buttonTextColor: '#173760'
   },
-  {
-    bgImage: '/images/homepage-carousel-3.png',
-    productImage: '/images/dummy-product-image.png',
-    gradientBg: 'linear-gradient(to top, rgba(193, 154, 107, 1) 0%, rgba(193, 154, 107, 1) 40%, rgba(193, 154, 107, 0) 80%)',
-    titleColor: '#FCFDF5',
-    buttonBg: '#173760',
-    buttonTextColor: '#FCFDF5'
-  }
+  // {
+  //   key: 'perfectForGift',
+  //   bgImage: '/images/homepage-carousel-3.png',
+  //   productImage: '/images/dummy-product-image.png',
+  //   gradientBg: 'linear-gradient(to top, rgba(193, 154, 107, 1) 0%, rgba(193, 154, 107, 1) 40%, rgba(193, 154, 107, 0) 80%)',
+  //   titleColor: '#FCFDF5',
+  //   buttonBg: '#CEB08A',
+  //   buttonTextColor: '#173760'
+  // }
 ]
 
 // ==================== State ====================
@@ -111,10 +116,10 @@ const currentSlideData = computed(() => {
   const slideConfig = slides.value[currentSlide.value]
   return {
     ...slideConfig,
-    title: t('heroCarousel.slides.goldenBond.title'),
-    price: t('heroCarousel.slides.goldenBond.price'),
-    description: t('heroCarousel.slides.goldenBond.description'),
-    buttonText: t('heroCarousel.slides.goldenBond.buttonText')
+    title: t(`heroCarousel.slides.${slideConfig.key}.title`),
+    price: t(`heroCarousel.slides.${slideConfig.key}.price`),
+    description: t(`heroCarousel.slides.${slideConfig.key}.description`),
+    buttonText: t(`heroCarousel.slides.${slideConfig.key}.buttonText`)
   }
 })
 

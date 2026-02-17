@@ -1,0 +1,450 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "slug": "kisa24-24k-1gr",
+      "name": "KISA24 24K 1gr",
+      "categoryId": "24k",
+      "subCategoryId": null,
+      "price": 2943000,
+      "buybackPrice": 2650000,
+      "image": "/images/dummy-product-image.png",
+      "images": [
+        "/images/dummy-product-image.png",
+        "/images/dummy-product-image.png",
+        "/images/dummy-product-image.png"
+      ],
+      "isAvailable": true,
+      "isFeatured": false,
+      "sortOrder": 1,
+      "details": {
+        "type": "KISA24 24K 1gr",
+        "netWeight": "1gr",
+        "dimensions": "15mm x 9mm x 1.2mm",
+        "purity": "99%",
+        "caseType": {
+          "en": "KISA24 gold acrylic frame",
+          "id": "Bingkai akrilik emas KISA24"
+        },
+        "physicalSecurity": {
+          "en": "Precision magnetic closure, tamper-evident hologram seal",
+          "id": "Pengunci magnet presisi, segel hologram anti-tamper"
+        },
+        "digitalSecurity": {
+          "en": "Unique serial code, private key, QR code verifiable through Kisagold online authentication platform",
+          "id": "Kode serial unik, kunci pribadi, kode QR yang dapat diverifikasi melalui platform autentikasi online Kisagold"
+        },
+        "quality": {
+          "en": "Gold purity verified by XRF testing. Lifetime buyback guaranteed by PT Kisa Mulia Abadi.",
+          "id": "Kemurnian emas diverifikasi melalui pengujian XRF. Jaminan buyback seumur hidup oleh PT Kisa Mulia Abadi."
+        }
+      }
+    },
+    {
+      "id": 2,
+      "slug": "kisa24-24k-5gr",
+      "name": "KISA24 24K 5gr",
+      "categoryId": "24k",
+      "subCategoryId": null,
+      "price": 14420000,
+      "buybackPrice": 13250000,
+      "image": "/images/dummy-product-image.png",
+      "images": [
+        "/images/dummy-product-image.png",
+        "/images/dummy-product-image.png",
+        "/images/dummy-product-image.png"
+      ],
+      "isAvailable": true,
+      "isFeatured": false,
+      "sortOrder": 2,
+      "details": {
+        "type": "KISA24 24K 5gr",
+        "netWeight": "5gr",
+        "dimensions": "27mm x 16mm x 2mm",
+        "purity": "99%",
+        "caseType": {
+          "en": "KISA24 gold acrylic frame",
+          "id": "Bingkai akrilik emas KISA24"
+        },
+        "physicalSecurity": {
+          "en": "Precision magnetic closure, tamper-evident hologram seal",
+          "id": "Pengunci magnet presisi, segel hologram anti-tamper"
+        },
+        "digitalSecurity": {
+          "en": "Unique serial code, private key, QR code verifiable through Kisagold online authentication platform",
+          "id": "Kode serial unik, kunci pribadi, kode QR yang dapat diverifikasi melalui platform autentikasi online Kisagold"
+        },
+        "quality": {
+          "en": "Gold purity verified by XRF testing. Lifetime buyback guaranteed by PT Kisa Mulia Abadi.",
+          "id": "Kemurnian emas diverifikasi melalui pengujian XRF. Jaminan buyback seumur hidup oleh PT Kisa Mulia Abadi."
+        }
+      }
+    },
+    {
+      "id": 3,
+      "slug": "kisa24-24k-10gr",
+      "name": "KISA24 24K 10gr",
+      "categoryId": "24k",
+      "subCategoryId": null,
+      "price": 28763000,
+      "buybackPrice": 26500000,
+      "image": "/images/dummy-product-image.png",
+      "images": [
+        "/images/dummy-product-image.png",
+        "/images/dummy-product-image.png",
+        "/images/dummy-product-image.png"
+      ],
+      "isAvailable": true,
+      "isFeatured": false,
+      "sortOrder": 3,
+      "details": {
+        "type": "KISA24 24K 10gr",
+        "netWeight": "10gr",
+        "dimensions": "35mm x 20mm x 3mm",
+        "purity": "99%",
+        "caseType": {
+          "en": "KISA24 gold acrylic frame",
+          "id": "Bingkai akrilik emas KISA24"
+        },
+        "physicalSecurity": {
+          "en": "Precision magnetic closure, tamper-evident hologram seal",
+          "id": "Pengunci magnet presisi, segel hologram anti-tamper"
+        },
+        "digitalSecurity": {
+          "en": "Unique serial code, private key, QR code verifiable through Kisagold online authentication platform",
+          "id": "Kode serial unik, kunci pribadi, kode QR yang dapat diverifikasi melalui platform autentikasi online Kisagold"
+        },
+        "quality": {
+          "en": "Gold purity verified by XRF testing. Lifetime buyback guaranteed by PT Kisa Mulia Abadi.",
+          "id": "Kemurnian emas diverifikasi melalui pengujian XRF. Jaminan buyback seumur hidup oleh PT Kisa Mulia Abadi."
+        }
+      }
+    },
+    {
+      "id": 4,
+      "slug": "kisa24-24k-25gr",
+      "name": "KISA24 24K 25gr",
+      "categoryId": "24k",
+      "subCategoryId": null,
+      "price": 71644000,
+      "buybackPrice": 66250000,
+      "image": "/images/dummy-product-image.png",
+      "images": [
+        "/images/dummy-product-image.png",
+        "/images/dummy-product-image.png",
+        "/images/dummy-product-image.png"
+      ],
+      "isAvailable": true,
+      "isFeatured": false,
+      "sortOrder": 4,
+      "details": {
+        "type": "KISA24 24K 25gr",
+        "netWeight": "25gr",
+        "dimensions": "49mm x 29mm x 4mm",
+        "purity": "99%",
+        "caseType": {
+          "en": "KISA24 gold acrylic frame",
+          "id": "Bingkai akrilik emas KISA24"
+        },
+        "physicalSecurity": {
+          "en": "Precision magnetic closure, tamper-evident hologram seal",
+          "id": "Pengunci magnet presisi, segel hologram anti-tamper"
+        },
+        "digitalSecurity": {
+          "en": "Unique serial code, private key, QR code verifiable through Kisagold online authentication platform",
+          "id": "Kode serial unik, kunci pribadi, kode QR yang dapat diverifikasi melalui platform autentikasi online Kisagold"
+        },
+        "quality": {
+          "en": "Gold purity verified by XRF testing. Lifetime buyback guaranteed by PT Kisa Mulia Abadi.",
+          "id": "Kemurnian emas diverifikasi melalui pengujian XRF. Jaminan buyback seumur hidup oleh PT Kisa Mulia Abadi."
+        }
+      }
+    },
+    {
+      "id": 5,
+      "slug": "kisa24-24k-100gr",
+      "name": "KISA24 24K 100gr",
+      "categoryId": "24k",
+      "subCategoryId": null,
+      "price": 285900000,
+      "buybackPrice": 265000000,
+      "image": "/images/dummy-product-image.png",
+      "images": [
+        "/images/dummy-product-image.png",
+        "/images/dummy-product-image.png",
+        "/images/dummy-product-image.png"
+      ],
+      "isAvailable": true,
+      "isFeatured": true,
+      "sortOrder": 5,
+      "details": {
+        "type": "KISA24 24K 100gr",
+        "netWeight": "100gr",
+        "dimensions": "75mm x 45mm x 6mm",
+        "purity": "99%",
+        "caseType": {
+          "en": "KISA24 gold acrylic frame",
+          "id": "Bingkai akrilik emas KISA24"
+        },
+        "physicalSecurity": {
+          "en": "Precision magnetic closure, tamper-evident hologram seal",
+          "id": "Pengunci magnet presisi, segel hologram anti-tamper"
+        },
+        "digitalSecurity": {
+          "en": "Unique serial code, private key, QR code verifiable through Kisagold online authentication platform",
+          "id": "Kode serial unik, kunci pribadi, kode QR yang dapat diverifikasi melalui platform autentikasi online Kisagold"
+        },
+        "quality": {
+          "en": "Gold purity verified by XRF testing. Lifetime buyback guaranteed by PT Kisa Mulia Abadi.",
+          "id": "Kemurnian emas diverifikasi melalui pengujian XRF. Jaminan buyback seumur hidup oleh PT Kisa Mulia Abadi."
+        }
+      }
+    },
+    {
+      "id": 6,
+      "slug": "kisa24-999-99-1gr",
+      "name": "KISA24 999.99 1gr",
+      "categoryId": "999-99",
+      "subCategoryId": null,
+      "price": 2960000,
+      "buybackPrice": 2680000,
+      "image": "/images/dummy-product-image.png",
+      "images": [
+        "/images/dummy-product-image.png",
+        "/images/dummy-product-image.png",
+        "/images/dummy-product-image.png"
+      ],
+      "isAvailable": true,
+      "isFeatured": false,
+      "sortOrder": 1,
+      "details": {
+        "type": "KISA24 999.99 1gr",
+        "netWeight": "1gr",
+        "dimensions": "15mm x 9mm x 1.2mm",
+        "purity": "99.99%",
+        "caseType": {
+          "en": "KISA24 navy blue acrylic frame",
+          "id": "Bingkai akrilik biru navy KISA24"
+        },
+        "physicalSecurity": {
+          "en": "Precision magnetic closure, tamper-evident hologram seal",
+          "id": "Pengunci magnet presisi, segel hologram anti-tamper"
+        },
+        "digitalSecurity": {
+          "en": "Unique serial code, private key, QR code verifiable through Kisagold online authentication platform",
+          "id": "Kode serial unik, kunci pribadi, kode QR yang dapat diverifikasi melalui platform autentikasi online Kisagold"
+        },
+        "quality": {
+          "en": "Produced by SNI-licensed refinery, verified by certified assayer. Lifetime buyback guaranteed by PT Kisa Mulia Abadi.",
+          "id": "Diproduksi oleh kilang berlisensi SNI, diverifikasi oleh penguji bersertifikat. Jaminan buyback seumur hidup oleh PT Kisa Mulia Abadi."
+        }
+      }
+    },
+    {
+      "id": 7,
+      "slug": "kisa24-999-99-5gr",
+      "name": "KISA24 999.99 5gr",
+      "categoryId": "999-99",
+      "subCategoryId": null,
+      "price": 14600000,
+      "buybackPrice": 13400000,
+      "image": "/images/dummy-product-image.png",
+      "images": [
+        "/images/dummy-product-image.png",
+        "/images/dummy-product-image.png",
+        "/images/dummy-product-image.png"
+      ],
+      "isAvailable": true,
+      "isFeatured": false,
+      "sortOrder": 2,
+      "details": {
+        "type": "KISA24 999.99 5gr",
+        "netWeight": "5gr",
+        "dimensions": "27mm x 16mm x 2mm",
+        "purity": "99.99%",
+        "caseType": {
+          "en": "KISA24 navy blue acrylic frame",
+          "id": "Bingkai akrilik biru navy KISA24"
+        },
+        "physicalSecurity": {
+          "en": "Precision magnetic closure, tamper-evident hologram seal",
+          "id": "Pengunci magnet presisi, segel hologram anti-tamper"
+        },
+        "digitalSecurity": {
+          "en": "Unique serial code, private key, QR code verifiable through Kisagold online authentication platform",
+          "id": "Kode serial unik, kunci pribadi, kode QR yang dapat diverifikasi melalui platform autentikasi online Kisagold"
+        },
+        "quality": {
+          "en": "Produced by SNI-licensed refinery, verified by certified assayer. Lifetime buyback guaranteed by PT Kisa Mulia Abadi.",
+          "id": "Diproduksi oleh kilang berlisensi SNI, diverifikasi oleh penguji bersertifikat. Jaminan buyback seumur hidup oleh PT Kisa Mulia Abadi."
+        }
+      }
+    },
+    {
+      "id": 8,
+      "slug": "kisa24-999-99-10gr",
+      "name": "KISA24 999.99 10gr",
+      "categoryId": "999-99",
+      "subCategoryId": null,
+      "price": 29000000,
+      "buybackPrice": 26800000,
+      "image": "/images/dummy-product-image.png",
+      "images": [
+        "/images/dummy-product-image.png",
+        "/images/dummy-product-image.png",
+        "/images/dummy-product-image.png"
+      ],
+      "isAvailable": true,
+      "isFeatured": false,
+      "sortOrder": 3,
+      "details": {
+        "type": "KISA24 999.99 10gr",
+        "netWeight": "10gr",
+        "dimensions": "35mm x 20mm x 3mm",
+        "purity": "99.99%",
+        "caseType": {
+          "en": "KISA24 navy blue acrylic frame",
+          "id": "Bingkai akrilik biru navy KISA24"
+        },
+        "physicalSecurity": {
+          "en": "Precision magnetic closure, tamper-evident hologram seal",
+          "id": "Pengunci magnet presisi, segel hologram anti-tamper"
+        },
+        "digitalSecurity": {
+          "en": "Unique serial code, private key, QR code verifiable through Kisagold online authentication platform",
+          "id": "Kode serial unik, kunci pribadi, kode QR yang dapat diverifikasi melalui platform autentikasi online Kisagold"
+        },
+        "quality": {
+          "en": "Produced by SNI-licensed refinery, verified by certified assayer. Lifetime buyback guaranteed by PT Kisa Mulia Abadi.",
+          "id": "Diproduksi oleh kilang berlisensi SNI, diverifikasi oleh penguji bersertifikat. Jaminan buyback seumur hidup oleh PT Kisa Mulia Abadi."
+        }
+      }
+    },
+    {
+      "id": 9,
+      "slug": "kisa24-999-99-25gr",
+      "name": "KISA24 999.99 25gr",
+      "categoryId": "999-99",
+      "subCategoryId": null,
+      "price": 72300000,
+      "buybackPrice": 67000000,
+      "image": "/images/dummy-product-image.png",
+      "images": [
+        "/images/dummy-product-image.png",
+        "/images/dummy-product-image.png",
+        "/images/dummy-product-image.png"
+      ],
+      "isAvailable": true,
+      "isFeatured": false,
+      "sortOrder": 4,
+      "details": {
+        "type": "KISA24 999.99 25gr",
+        "netWeight": "25gr",
+        "dimensions": "49mm x 29mm x 4mm",
+        "purity": "99.99%",
+        "caseType": {
+          "en": "KISA24 navy blue acrylic frame",
+          "id": "Bingkai akrilik biru navy KISA24"
+        },
+        "physicalSecurity": {
+          "en": "Precision magnetic closure, tamper-evident hologram seal",
+          "id": "Pengunci magnet presisi, segel hologram anti-tamper"
+        },
+        "digitalSecurity": {
+          "en": "Unique serial code, private key, QR code verifiable through Kisagold online authentication platform",
+          "id": "Kode serial unik, kunci pribadi, kode QR yang dapat diverifikasi melalui platform autentikasi online Kisagold"
+        },
+        "quality": {
+          "en": "Produced by SNI-licensed refinery, verified by certified assayer. Lifetime buyback guaranteed by PT Kisa Mulia Abadi.",
+          "id": "Diproduksi oleh kilang berlisensi SNI, diverifikasi oleh penguji bersertifikat. Jaminan buyback seumur hidup oleh PT Kisa Mulia Abadi."
+        }
+      }
+    },
+    {
+      "id": 10,
+      "slug": "kisa24-999-99-100gr",
+      "name": "KISA24 999.99 100gr",
+      "categoryId": "999-99",
+      "subCategoryId": null,
+      "price": 287500000,
+      "buybackPrice": 268000000,
+      "image": "/images/dummy-product-image.png",
+      "images": [
+        "/images/dummy-product-image.png",
+        "/images/dummy-product-image.png",
+        "/images/dummy-product-image.png"
+      ],
+      "isAvailable": true,
+      "isFeatured": true,
+      "sortOrder": 5,
+      "details": {
+        "type": "KISA24 999.99 100gr",
+        "netWeight": "100gr",
+        "dimensions": "75mm x 45mm x 6mm",
+        "purity": "99.99%",
+        "caseType": {
+          "en": "KISA24 navy blue acrylic frame",
+          "id": "Bingkai akrilik biru navy KISA24"
+        },
+        "physicalSecurity": {
+          "en": "Precision magnetic closure, tamper-evident hologram seal",
+          "id": "Pengunci magnet presisi, segel hologram anti-tamper"
+        },
+        "digitalSecurity": {
+          "en": "Unique serial code, private key, QR code verifiable through Kisagold online authentication platform",
+          "id": "Kode serial unik, kunci pribadi, kode QR yang dapat diverifikasi melalui platform autentikasi online Kisagold"
+        },
+        "quality": {
+          "en": "Produced by SNI-licensed refinery, verified by certified assayer. Lifetime buyback guaranteed by PT Kisa Mulia Abadi.",
+          "id": "Diproduksi oleh kilang berlisensi SNI, diverifikasi oleh penguji bersertifikat. Jaminan buyback seumur hidup oleh PT Kisa Mulia Abadi."
+        }
+      }
+    },
+    {
+      "id": 11,
+      "slug": "kisa24-custom",
+      "name": "KISA24 Custom",
+      "categoryId": "custom",
+      "subCategoryId": null,
+      "price": null,
+      "buybackPrice": null,
+      "image": "/images/dummy-product-image.png",
+      "images": [
+        "/images/dummy-product-image.png",
+        "/images/dummy-product-image.png",
+        "/images/dummy-product-image.png"
+      ],
+      "isAvailable": true,
+      "isFeatured": true,
+      "sortOrder": 1,
+      "details": {
+        "type": "KISA24 Custom",
+        "netWeight": {
+          "en": "Varies by configuration",
+          "id": "Tergantung konfigurasi"
+        },
+        "dimensions": {
+          "en": "Custom",
+          "id": "Kustom"
+        },
+        "purity": "999.9",
+        "caseType": {
+          "en": "Premium custom packaging",
+          "id": "Kemasan premium kustom"
+        },
+        "physicalSecurity": {
+          "en": "Precision magnetic closure, tamper-evident hologram seal",
+          "id": "Pengunci magnet presisi, segel hologram anti-tamper"
+        },
+        "digitalSecurity": {
+          "en": "Unique serial code, private key, QR code verifiable through Kisagold online authentication platform",
+          "id": "Kode serial unik, kunci pribadi, kode QR yang dapat diverifikasi melalui platform autentikasi online Kisagold"
+        },
+        "quality": {
+          "en": "Produced by SNI-licensed refinery, verified by certified assayer. Lifetime buyback guaranteed by PT Kisa Mulia Abadi.",
+          "id": "Diproduksi oleh kilang berlisensi SNI, diverifikasi oleh penguji bersertifikat. Jaminan buyback seumur hidup oleh PT Kisa Mulia Abadi."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "categories": [
+    {
+      "id": "all",
+      "slug": "all",
+      "name": {
+        "en": "All Product",
+        "id": "Semua Produk"
+      },
+      "description": {
+        "en": "Browse our complete collection of KISA24 gold bars.",
+        "id": "Jelajahi koleksi lengkap batang emas KISA24 kami."
+      },
+      "hasDropdown": false,
+      "bgImage": "/images/pl-hero-bg-desktop.png",
+      "isActive": true,
+      "sortOrder": 0
+    },
+    {
+      "id": "24k",
+      "slug": "24k",
+      "name": {
+        "en": "24K",
+        "id": "24K"
+      },
+      "description": {
+        "en": "Gold bar with 99.00% purity (24K). Gold purity verified by XRF testing and lifetime buyback guaranteed by PT Kisa Mulia Abadi.",
+        "id": "Batang emas dengan kemurnian 99.00% (24K). Kemurnian emas diverifikasi melalui pengujian XRF dan jaminan buyback seumur hidup oleh PT Kisa Mulia Abadi."
+      },
+      "buttonText": {
+        "en": "Browse collection",
+        "id": "Lihat koleksi"
+      },
+      "hasDropdown": false,
+      "bgImage": "/images/pl-hero-bg-desktop.png",
+      "isActive": true,
+      "sortOrder": 1,
+      "purity": "99.0",
+      "certification": "24K"
+    },
+    {
+      "id": "999-99",
+      "slug": "999-99",
+      "name": {
+        "en": "999.99",
+        "id": "999.99"
+      },
+      "description": {
+        "en": "SNI-certified gold bar with 99.99% purity. Produced by SNI-licensed refinery, verified by certified assayer. Lifetime buyback guaranteed by PT Kisa Mulia Abadi.",
+        "id": "Batang emas bersertifikat SNI dengan kemurnian 99.99%. Diproduksi oleh kilang berlisensi SNI, diverifikasi oleh penguji bersertifikat. Jaminan buyback seumur hidup oleh PT Kisa Mulia Abadi."
+      },
+      "buttonText": {
+        "en": "Browse collection",
+        "id": "Lihat koleksi"
+      },
+      "hasDropdown": false,
+      "bgImage": "/images/pl-hero-bg-desktop.png",
+      "isActive": true,
+      "sortOrder": 2,
+      "purity": "999.9",
+      "certification": "SNI"
+    },
+    {
+      "id": "custom",
+      "slug": "custom",
+      "name": {
+        "en": "Custom",
+        "id": "Custom"
+      },
+      "description": {
+        "en": "Make any celebration truly extraordinary with personalized gold pieces. Lifetime buyback guaranteed by PT Kisa Mulia Abadi.",
+        "id": "Jadikan setiap perayaan benar-benar luar biasa dengan koleksi emas personal. Jaminan buyback seumur hidup oleh PT Kisa Mulia Abadi."
+      },
+      "buttonText": {
+        "en": "Inquire Now",
+        "id": "Hubungi Kami"
+      },
+      "hasDropdown": false,
+      "bgImage": "/images/pl-hero-bg-desktop.png",
+      "isActive": true,
+      "sortOrder": 3
+    }
+  ],
+  "subCategories": []
+}
