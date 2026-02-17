@@ -10,7 +10,8 @@
     </div>
 
     <!-- Gradient Overlay -->
-    <div class="gradient-overlay" />
+    <div class="gradient-overlay xl:hidden" />
+    <div class="gradient-overlay-desktop hidden xl:block" />
 
     <!-- Content -->
     <div class="relative h-full px-4 xl:px-8">
@@ -47,20 +48,20 @@ const images = {
 <style scoped>
 /* ==================== Hero Section ==================== */
 .hero-section {
-  @apply relative overflow-hidden bg-[#050401];
-  @apply h-[350px] xl:h-[700px];
+  @apply relative overflow-hidden bg-[#050401] h-[350px] xl:h-[700px];
 }
 
 /* ==================== Background Image ==================== */
 .hero-bg-image {
   @apply w-full h-full object-cover;
+}
+
+.hero-bg-image.xl\:hidden {
   object-position: 70%;
 }
 
-@media (min-width: 1280px) {
-  .hero-bg-image {
-    object-position: 20vw;
-  }
+.hero-bg-image.xl\:block {
+  object-position: 20vw;
 }
 
 /* ==================== Gradient Overlay ==================== */
@@ -69,10 +70,9 @@ const images = {
   background: linear-gradient(to right, rgba(5, 4, 1, 1) 15%, rgba(5, 4, 1, 0.5) 50%, rgba(5, 4, 1, 0.2) 100%);
 }
 
-@media (min-width: 1280px) {
-  .gradient-overlay {
-    background: linear-gradient(to right, rgba(5, 4, 1, 1) 15%, rgba(5, 4, 1, 0.5) 30%, rgba(5, 4, 1, 0) 100%);
-  }
+.gradient-overlay-desktop {
+  @apply absolute w-full h-full;
+  background: linear-gradient(to right, rgba(5, 4, 1, 1) 15%, rgba(5, 4, 1, 0.5) 30%, rgba(5, 4, 1, 0) 100%);
 }
 
 /* ==================== Content Layout ==================== */
@@ -81,7 +81,7 @@ const images = {
 }
 
 .content-wrapper {
-  @apply flex flex-col justify-end h-full pb-6 xl:justify-center;
+  @apply flex flex-col justify-end xl:justify-center h-full pb-6 xl:pb-0;
 }
 
 /* ==================== Typography ==================== */
@@ -93,7 +93,6 @@ const images = {
 
 .hero-description {
   @apply font-assistant font-normal text-base xl:text-xl;
-  @apply leading-5 xl:leading-8 xl:max-w-3xl text-left;
-  @apply text-white;
+  @apply leading-5 xl:leading-8 xl:max-w-3xl text-left text-white;
 }
 </style>

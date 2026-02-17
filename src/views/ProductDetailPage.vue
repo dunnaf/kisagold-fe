@@ -3,6 +3,7 @@
     <template v-if="isLoaded">
       <PDHeroSection />
       <PDRecommendedSection />
+      <HowToPurchase />
     </template>
   </AppLayout>
 </template>
@@ -14,6 +15,7 @@ import { withLoading } from '@/utils/loading'
 import AppLayout from '../components/layout/AppLayout.vue'
 import PDHeroSection from '../components/productdetail/PDHeroSection.vue'
 import PDRecommendedSection from '../components/productdetail/PDRecommendedSection.vue'
+import HowToPurchase from '../components/common/HowToPurchase.vue'
 
 // ==================== State ====================
 const route = useRoute()

@@ -22,7 +22,7 @@ import PDProductInfo from './PDProductInfo.vue'
 <style scoped>
 /* ==================== Hero Section ==================== */
 .pd-hero-section {
-  @apply bg-[#EBDFCC] pb-10 xl:pb-[60px] min-h-screen;
+  @apply bg-[#EBDFCC] pb-10 xl:pb-[60px];
 }
 
 /* ==================== Header Spacer Overlay ==================== */

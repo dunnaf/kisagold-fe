@@ -28,8 +28,7 @@
                 :style="{ color: isScrolled ? '#173760' : '#FCFDF5' }">
                 {{ item.label }}
               </router-link>
-              <span v-else class="nav-link nav-link-disabled"
-                :style="{ color: isScrolled ? '#173760' : '#FCFDF5' }">
+              <span v-else class="nav-link nav-link-disabled" :style="{ color: isScrolled ? '#173760' : '#FCFDF5' }">
                 {{ item.label }}
               </span>
             </template>
@@ -99,8 +98,7 @@
           <!-- Navigation Links -->
           <nav class="mobile-nav-wrapper">
             <template v-for="item in navItems" :key="item.path">
-              <router-link v-if="!item.disabled" :to="item.path" @click="closeMobileMenu"
-                class="mobile-nav-link">
+              <router-link v-if="!item.disabled" :to="item.path" @click="closeMobileMenu" class="mobile-nav-link">
                 <span class="mobile-nav-link-text">{{ item.label }}</span>
                 <svg class="mobile-nav-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none">
                   <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -211,12 +209,9 @@ onUnmounted(() => {
 <style scoped>
 /* ==================== Header Wrapper ==================== */
 .header-wrapper {
-  @apply fixed top-0 left-0 w-full z-50;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 50;
+  @apply fixed top-0 z-50;
+  @apply left-1/2 -translate-x-1/2 xl:left-0 xl:translate-x-0;
+  @apply w-full max-w-[600px] xl:max-w-none mx-auto;
 }
 
 /* ==================== Header Backgrounds ==================== */
@@ -234,15 +229,8 @@ onUnmounted(() => {
 
 /* ==================== Logo Styles ==================== */
 .logo-container {
-  @apply relative inline-block;
-  width: 140px;
+  @apply relative inline-block w-[140px] xl:w-[200px];
   height: auto;
-}
-
-@media (min-width: 1280px) {
-  .logo-container {
-    width: 200px;
-  }
 }
 
 .logo-image {
@@ -278,7 +266,7 @@ onUnmounted(() => {
 
 /* ==================== Mobile Menu Overlay ==================== */
 .mobile-menu-overlay {
-  @apply fixed inset-0 z-50 overflow-hidden;
+  @apply fixed h-screen inset-0 z-50 overflow-hidden;
   -webkit-overflow-scrolling: touch;
   transform: translateZ(0);
   backface-visibility: hidden;

@@ -168,24 +168,17 @@ const handleCardClick = (cardType) => {
 <style scoped>
 /* ==================== Section Container ==================== */
 .shop-by-category {
-  @apply py-12 xl:py-20;
-  @apply relative;
+  @apply py-12 xl:py-24 relative;
   background: #EBDFCC;
 }
 
 .shop-by-category::before {
   content: '';
   @apply absolute inset-0 pointer-events-none;
-  @apply bg-center bg-no-repeat;
-  @apply opacity-0 transition-opacity duration-300;
+  @apply bg-center bg-no-repeat opacity-0 xl:opacity-20;
+  @apply transition-opacity duration-300;
   background-image: url('/images/bg-flower.png');
   background-size: 70%;
-}
-
-@media (min-width: 1280px) {
-  .shop-by-category::before {
-    @apply opacity-20;
-  }
 }
 
 .container {
@@ -200,21 +193,16 @@ const handleCardClick = (cardType) => {
 }
 
 .logo-flower {
-  @apply w-20 h-20 xl:w-20 xl:h-20;
-  @apply mx-auto xl:mx-0 mb-6;
+  @apply w-20 h-20 mx-auto xl:mx-0 mb-6;
 }
 
 .section-title {
-  @apply font-trajan font-bold;
-  @apply text-4xl xl:text-5xl;
-  @apply mb-4 xl:mb-8;
+  @apply font-trajan font-bold text-4xl xl:text-5xl mb-4 xl:mb-8;
   color: #173760;
 }
 
 .section-description {
-  @apply font-assistant font-normal text-left;
-  @apply text-base xl:text-lg;
-  @apply leading-relaxed;
+  @apply font-assistant font-normal text-left text-base xl:text-lg leading-relaxed;
   color: #000000;
 }
 
@@ -250,9 +238,7 @@ const handleCardClick = (cardType) => {
 /* ==================== Carousel Arrows ==================== */
 .carousel-arrow {
   @apply absolute top-1/2 -translate-y-1/2 z-10;
-  @apply w-12 h-12 rounded-full;
-  @apply flex items-center justify-center;
-  @apply cursor-pointer;
+  @apply w-12 h-12 rounded-full flex items-center justify-center cursor-pointer;
   background: rgba(38, 38, 38, 0.5);
   transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(4px);
@@ -277,8 +263,7 @@ const handleCardClick = (cardType) => {
 
 /* ==================== Desktop Grid ==================== */
 .desktop-grid {
-  @apply grid-cols-2 gap-6;
-  @apply max-w-[960px] mx-auto;
+  @apply grid-cols-2 gap-6 max-w-[960px] mx-auto;
 }
 
 .desktop-grid .product-card {
@@ -287,9 +272,7 @@ const handleCardClick = (cardType) => {
 
 /* ==================== Product Card ==================== */
 .product-card {
-  @apply relative rounded-lg overflow-hidden;
-  @apply bg-cover bg-center;
-  @apply cursor-pointer;
+  @apply relative rounded-lg overflow-hidden bg-cover bg-center cursor-pointer;
   transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -310,29 +293,21 @@ const handleCardClick = (cardType) => {
 
 /* ==================== Card Content ==================== */
 .card-content {
-  @apply absolute bottom-0 left-0 right-0;
-  @apply p-3 xl:p-8;
-  @apply z-10;
+  @apply absolute bottom-0 left-0 right-0 p-3 xl:p-8 z-10;
 }
 
 .card-title {
-  @apply font-trajan font-bold;
-  @apply text-lg xl:text-3xl;
-  @apply mb-0 xl:mb-4;
+  @apply font-trajan font-bold text-lg xl:text-3xl mb-0 xl:mb-4;
   color: #CEB08A;
 }
 
 .card-description {
-  @apply font-assistant font-normal;
-  @apply text-sm xl:text-base;
-  @apply mb-1 xl:mb-6 leading-5;
-  @apply text-white opacity-80;
+  @apply font-assistant font-normal text-sm xl:text-base;
+  @apply mb-1 xl:mb-6 leading-5 text-white opacity-80;
 }
 
 .card-button {
-  @apply font-assistant font-semibold;
-  @apply text-sm xl:text-base;
-  @apply text-white;
+  @apply font-assistant font-semibold text-sm xl:text-base text-white;
   @apply flex items-center gap-2;
   transition: gap 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -347,12 +322,5 @@ const handleCardClick = (cardType) => {
 
 .card-button:hover .arrow-icon {
   @apply translate-x-1;
-}
-
-/* ==================== Responsive Adjustments ==================== */
-@media (min-width: 1280px) {
-  .shop-by-category {
-    @apply py-24;
-  }
 }
 </style>

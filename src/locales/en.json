@@ -213,5 +213,140 @@
       "custom": "KISA24 Custom"
     },
     "viewAllButton": "VIEW ALL PRODUCT"
+  },
+  "archipelago": {
+    "flowerLogo": {
+      "alt": "KISA24 Flower Logo"
+    },
+    "title": "From the archipelago beneath",
+    "description": {
+      "highlight": "Every KISA24 gold bar is fully traceable - the authenticity.",
+      "muted": "We partner up with companies that hold mining business license company (IUP), Mining Sales & Transport Licences (IU PP), refinery & processing license."
+    },
+    "companies": {
+      "kristalin": {
+        "alt": "Kristalin Era Lestari Logo",
+        "descriptionHighlight": "Holds a Mining Business License (IUP)",
+        "descriptionMuted": "for exploration and production across 3,500 hectares in Papua. Registered with MODI."
+      },
+      "atrina": {
+        "alt": "Atrina Logo",
+        "descriptionHighlight": "Holds a Mining Sales & Transport License (IPP)",
+        "descriptionMuted": "for gold trading and logistics."
+      }
+    }
+  },
+  "priceTable": {
+    "title": "Value Without Compromise",
+    "description": "While gold may move with the market, trust remains constant. KISA24 comes with a best-in-market rate with a lifetime buyback guarantee — ensuring that our clients are supported not just at the point of purchase, but across the years to come.",
+    "date": "Tanggal: 10 Feb 2026 9:30 WIB",
+    "weightLabel": "Berat (gr)",
+    "buyPriceLabel": "Harga Beli (Rp)",
+    "buybackPriceLabel": "Harga Buyback (Rp)",
+    "classic24k": "KISA24 Classic — 24K (99% purity)",
+    "classic999": "KISA24 Classic — 999.9 (SNI-certified)",
+    "inquireButton": "INQUIRE NOW"
+  },
+  "howToPurchase": {
+    "title": "How To Purchase",
+    "description": "Lorem ipsum dolor sit amet consectetur. A risus in ultrices mi eu. Pellentesque aenean quis sit ultricies tellus in velit et. Purus pretium tellus pharetra ac fringilla. Mattis nibh gravida sed elementum urna.",
+    "handImage": {
+      "alt": "Hand Image"
+    },
+    "steps": {
+      "1": {
+        "iconAlt": "Step 1 Icon",
+        "title": "Hubungi Kami",
+        "description": "Hubungi kami melalui nomor WhatsApp kami (+62 8518 8888 877). Tim kami akan membantu terkait detail produk, harga, serta menjawab pertanyaan Anda."
+      },
+      "2": {
+        "iconAlt": "Step 2 Icon",
+        "title": "Konfirmasi Order",
+        "description": "Konfirmasi pre-order dengan melakukan pembayaran uang muka (DP) untuk mengunci nilai transaksi Anda dan menerima invoice. Waktu tunggu pre-order maksimal 3 hari kerja."
+      },
+      "3": {
+        "iconAlt": "Step 3 Icon",
+        "title": "Emas Disiapkan",
+        "description": "Emas batangan Anda akan disiapkan, dilayir (assayer), dan disertifikasi dalam waktu 3 hari kerja. Setiap barang emas memiliki nomor ID unik untuk verifikasi & private key, diberikan dengan aman dalam database kami."
+      },
+      "4": {
+        "iconAlt": "Step 4 Icon",
+        "title": "Pelunasan & Terima Emas",
+        "description": "Kami akan memberitahu Anda ketika KISA24 sudah siap untuk pelunasan penuh dan serah terima. Anda dapat mengambil emas di kantor pusat kami (Property Tower 21F, District 8) atau menerima pengiriman ke alamat Anda."
+      }
+    }
+  },
+  "whyChoose": {
+    "flowerLogo": {
+      "alt": "KISA24 Flower Logo"
+    },
+    "title": "Why Choose KISAGOLD?",
+    "description": "At Kisagold, every piece is crafted with exclusivity in mind. To maintain our high standards of personalization and service, purchases are made through direct consultation.",
+    "features": {
+      "1": {
+        "iconAlt": "Guaranteed Liquidity Icon",
+        "title": "Liquiditas Terjamin",
+        "description": "Harga beli dan buyback terbaik di pasar, transparan setiap hari tanpa biaya tambahan apapun"
+      },
+      "2": {
+        "iconAlt": "999.9 Gold Purity Icon",
+        "title": "Kadar Emas 999.9",
+        "description": "Kadar emas terjamin untuk edisi 24K maupun 999.9"
+      },
+      "3": {
+        "iconAlt": "Easy Authenticity Verification Icon",
+        "title": "Mudah Dicek Keasliannya",
+        "description": "Fitur keamanan lengkap, Dilengkapi QR code, hologram seal, proses verifikasi digital"
+      },
+      "4": {
+        "iconAlt": "Artistic Design Icon",
+        "title": "Desain Artistik",
+        "description": "Kisagold hadir dengan desain yang artistik sehingga cocok dijadikan barang koleksi"
+      }
+    }
+  },
+  "faq": {
+    "flowerLogo": {
+      "alt": "KISA24 Flower Logo"
+    },
+    "title": "Frequently Asked Questions",
+    "items": {
+      "1": {
+        "question": "1. What is Kisagold, and what is KISA24?",
+        "answer": "Kisagold is a private gold brand founded on the principles of trust, precision, and legacy. KISA24 is our 24-karat gold bar, certified at 99.99% purity, and individually serialized for authenticity and traceability."
+      },
+      "2": {
+        "question": "2. How can I verify the authenticity of a KISA24 gold bar?",
+        "answer": "Each KISA24 gold bar comes with a unique serial number and certificate of authenticity. You can verify your bar through our secure online verification system using the serial number."
+      },
+      "3": {
+        "question": "3. Why should I choose KISA24 over other gold products?",
+        "answer": "KISA24 offers unparalleled traceability from mine to market, certified 99.99% purity, and individual serialization. Our gold is sourced ethically from licensed mining operations in Papua, Indonesia."
+      },
+      "4": {
+        "question": "4. Where does Kisagold source its gold for KISA24?",
+        "answer": "Our gold is sourced from licensed mining operations in Papua, Indonesia, through our partner Kristalin Era Lestari, which holds a Mining Business License (IUP) for 3,500 hectares."
+      },
+      "5": {
+        "question": "5. What sizes of KISA24 gold bars are available?",
+        "answer": "KISA24 gold bars are available in various sizes ranging from 1 gram to 1 kilogram, catering to both individual investors and institutional buyers."
+      },
+      "6": {
+        "question": "6. How is the price and buyback rate of KISA24 determined?",
+        "answer": "Our pricing is based on current international gold market rates with transparent margins. The buyback rate is competitive and clearly displayed on our platform."
+      },
+      "7": {
+        "question": "7. How do I purchase a KISA24 gold bar?",
+        "answer": "You can purchase KISA24 gold bars through our website, authorized dealers, or by contacting our sales team directly. We offer secure payment options and insured delivery."
+      },
+      "8": {
+        "question": "8. Where can I sell my KISA24 gold bar?",
+        "answer": "You can sell your KISA24 gold bar back to us through our buyback program or through any authorized gold dealer. Our serial number system ensures easy verification."
+      },
+      "9": {
+        "question": "9. Can I sell gold bars from other brands to Kisagold?",
+        "answer": "Yes, we accept gold bars from other reputable brands subject to verification of authenticity and purity. Please contact our team for more information on our acceptance criteria."
+      }
+    }
   }
 }

@@ -213,5 +213,140 @@
       "custom": "KISA24 Custom"
     },
     "viewAllButton": "LIHAT SEMUA PRODUK"
+  },
+  "archipelago": {
+    "flowerLogo": {
+      "alt": "Logo Bunga KISA24"
+    },
+    "title": "Dari kepulauan di bawah",
+    "description": {
+      "highlight": "Setiap batangan emas KISA24 dapat dilacak sepenuhnya - keasliannya.",
+      "muted": "Kami bermitra dengan perusahaan yang memiliki Izin Usaha Pertambangan (IUP), Izin Penjualan & Transportasi Pertambangan (IU PP), izin pemurnian & pengolahan."
+    },
+    "companies": {
+      "kristalin": {
+        "alt": "Logo Kristalin Era Lestari",
+        "descriptionHighlight": "Memiliki Izin Usaha Pertambangan (IUP)",
+        "descriptionMuted": "untuk eksplorasi dan produksi di 3.500 hektar di Papua. Terdaftar di MODI."
+      },
+      "atrina": {
+        "alt": "Logo Atrina",
+        "descriptionHighlight": "Memiliki Izin Penjualan & Transportasi Pertambangan (IPP)",
+        "descriptionMuted": "untuk perdagangan dan logistik emas."
+      }
+    }
+  },
+  "priceTable": {
+    "title": "Nilai Tanpa Kompromi",
+    "description": "Meskipun emas dapat bergerak mengikuti pasar, kepercayaan tetap konstan. KISA24 hadir dengan harga terbaik di pasar dengan jaminan pembelian kembali seumur hidup — memastikan klien kami didukung tidak hanya pada saat pembelian, tetapi sepanjang tahun-tahun mendatang.",
+    "date": "Tanggal: 10 Feb 2026 9:30 WIB",
+    "weightLabel": "Berat (gr)",
+    "buyPriceLabel": "Harga Beli (Rp)",
+    "buybackPriceLabel": "Harga Buyback (Rp)",
+    "classic24k": "KISA24 Classic — 24K (kemurnian 99%)",
+    "classic999": "KISA24 Classic — 999.9 (bersertifikat SNI)",
+    "inquireButton": "TANYAKAN SEKARANG"
+  },
+  "howToPurchase": {
+    "title": "How To Purchase",
+    "description": "Lorem ipsum dolor sit amet consectetur. A risus in ultrices mi eu. Pellentesque aenean quis sit ultricies tellus in velit et. Purus pretium tellus pharetra ac fringilla. Mattis nibh gravida sed elementum urna.",
+    "handImage": {
+      "alt": "Gambar Tangan"
+    },
+    "steps": {
+      "1": {
+        "iconAlt": "Ikon Langkah 1",
+        "title": "Hubungi Kami",
+        "description": "Hubungi kami melalui nomor WhatsApp kami (+62 8518 8888 877). Tim kami akan membantu terkait detail produk, harga, serta menjawab pertanyaan Anda."
+      },
+      "2": {
+        "iconAlt": "Ikon Langkah 2",
+        "title": "Konfirmasi Order",
+        "description": "Konfirmasi pre-order dengan melakukan pembayaran uang muka (DP) untuk mengunci nilai transaksi Anda dan menerima invoice. Waktu tunggu pre-order maksimal 3 hari kerja."
+      },
+      "3": {
+        "iconAlt": "Ikon Langkah 3",
+        "title": "Emas Disiapkan",
+        "description": "Emas batangan Anda akan disiapkan, dilayir (assayer), dan disertifikasi dalam waktu 3 hari kerja. Setiap barang emas memiliki nomor ID unik untuk verifikasi & private key, diberikan dengan aman dalam database kami."
+      },
+      "4": {
+        "iconAlt": "Ikon Langkah 4",
+        "title": "Pelunasan & Terima Emas",
+        "description": "Kami akan memberitahu Anda ketika KISA24 sudah siap untuk pelunasan penuh dan serah terima. Anda dapat mengambil emas di kantor pusat kami (Property Tower 21F, District 8) atau menerima pengiriman ke alamat Anda."
+      }
+    }
+  },
+  "whyChoose": {
+    "flowerLogo": {
+      "alt": "Logo Bunga KISA24"
+    },
+    "title": "Why Choose KISAGOLD?",
+    "description": "At Kisagold, every piece is crafted with exclusivity in mind. To maintain our high standards of personalization and service, purchases are made through direct consultation.",
+    "features": {
+      "1": {
+        "iconAlt": "Ikon Likuiditas Terjamin",
+        "title": "Liquiditas Terjamin",
+        "description": "Harga beli dan buyback terbaik di pasar, transparan setiap hari tanpa biaya tambahan apapun"
+      },
+      "2": {
+        "iconAlt": "Ikon Kadar Emas 999.9",
+        "title": "Kadar Emas 999.9",
+        "description": "Kadar emas terjamin untuk edisi 24K maupun 999.9"
+      },
+      "3": {
+        "iconAlt": "Ikon Verifikasi Keaslian Mudah",
+        "title": "Mudah Dicek Keasliannya",
+        "description": "Fitur keamanan lengkap, Dilengkapi QR code, hologram seal, proses verifikasi digital"
+      },
+      "4": {
+        "iconAlt": "Ikon Desain Artistik",
+        "title": "Desain Artistik",
+        "description": "Kisagold hadir dengan desain yang artistik sehingga cocok dijadikan barang koleksi"
+      }
+    }
+  },
+  "faq": {
+    "flowerLogo": {
+      "alt": "Logo Bunga KISA24"
+    },
+    "title": "Pertanyaan yang Sering Diajukan",
+    "items": {
+      "1": {
+        "question": "1. Apa itu Kisagold, dan apa itu KISA24?",
+        "answer": "Kisagold adalah merek emas swasta yang didirikan berdasarkan prinsip kepercayaan, presisi, dan warisan. KISA24 adalah batangan emas 24 karat kami, bersertifikat kemurnian 99,99%, dan diberi nomor seri individual untuk keaslian dan ketertelusuran."
+      },
+      "2": {
+        "question": "2. Bagaimana saya dapat memverifikasi keaslian batangan emas KISA24?",
+        "answer": "Setiap batangan emas KISA24 dilengkapi dengan nomor seri unik dan sertifikat keaslian. Anda dapat memverifikasi batangan Anda melalui sistem verifikasi online kami yang aman menggunakan nomor seri."
+      },
+      "3": {
+        "question": "3. Mengapa saya harus memilih KISA24 dibandingkan produk emas lainnya?",
+        "answer": "KISA24 menawarkan ketertelusuran yang tak tertandingi dari tambang ke pasar, kemurnian 99,99% bersertifikat, dan serialisasi individual. Emas kami bersumber secara etis dari operasi pertambangan berlisensi di Papua, Indonesia."
+      },
+      "4": {
+        "question": "4. Dari mana Kisagold mendapatkan emas untuk KISA24?",
+        "answer": "Emas kami bersumber dari operasi pertambangan berlisensi di Papua, Indonesia, melalui mitra kami Kristalin Era Lestari, yang memiliki Izin Usaha Pertambangan (IUP) untuk 3.500 hektar."
+      },
+      "5": {
+        "question": "5. Ukuran batangan emas KISA24 apa saja yang tersedia?",
+        "answer": "Batangan emas KISA24 tersedia dalam berbagai ukuran mulai dari 1 gram hingga 1 kilogram, melayani investor individu maupun pembeli institusional."
+      },
+      "6": {
+        "question": "6. Bagaimana harga dan tingkat pembelian kembali KISA24 ditentukan?",
+        "answer": "Harga kami didasarkan pada tarif pasar emas internasional saat ini dengan margin yang transparan. Tingkat pembelian kembali kompetitif dan ditampilkan dengan jelas di platform kami."
+      },
+      "7": {
+        "question": "7. Bagaimana cara membeli batangan emas KISA24?",
+        "answer": "Anda dapat membeli batangan emas KISA24 melalui situs web kami, dealer resmi, atau dengan menghubungi tim penjualan kami secara langsung. Kami menawarkan opsi pembayaran yang aman dan pengiriman yang diasuransikan."
+      },
+      "8": {
+        "question": "8. Di mana saya dapat menjual batangan emas KISA24 saya?",
+        "answer": "Anda dapat menjual batangan emas KISA24 Anda kembali kepada kami melalui program pembelian kembali atau melalui dealer emas resmi mana pun. Sistem nomor seri kami memastikan verifikasi mudah."
+      },
+      "9": {
+        "question": "9. Bisakah saya menjual batangan emas dari merek lain ke Kisagold?",
+        "answer": "Ya, kami menerima batangan emas dari merek terkemuka lainnya dengan verifikasi keaslian dan kemurnian. Silakan hubungi tim kami untuk informasi lebih lanjut tentang kriteria penerimaan kami."
+      }
+    }
   }
 }

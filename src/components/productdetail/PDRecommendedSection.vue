@@ -1,31 +1,37 @@
 <template>
   <section class="recommended-section">
     <div class="container">
-      <!-- Decorative Flower -->
-      <div class="flower-icon">
-        <img :src="flowerIcon" :alt="t('productDetail.recommended.flowerAlt')" />
+      <div class="content-wrapper">
+        <div>
+          <!-- Decorative Flower -->
+          <div class="flower-icon">
+            <img :src="flowerIcon" :alt="t('productDetail.recommended.flowerAlt')" />
+          </div>
+
+          <!-- Section Title -->
+          <h2 class="section-title">{{ t('productDetail.recommended.title') }}</h2>
+        </div>
+        <!-- View All Button -->
+        <div class="button-wrapper-desktop">
+          <button class="view-all-btn" @click="goToProductList">
+            {{ t('productDetail.recommended.viewAllButton') }}
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
       </div>
 
-      <!-- Section Title -->
-      <h2 class="section-title">{{ t('productDetail.recommended.title') }}</h2>
 
       <!-- Desktop Carousel Version -->
       <div class="desktop-only">
         <div class="carousel-wrapper">
-          <button
-            class="carousel-btn prev-btn"
-            :disabled="currentSlide === 0"
-            :aria-label="t('productDetail.recommended.navigation.previous')"
-            @click="prevSlide"
-          >
+          <button class="carousel-btn prev-btn" :disabled="currentSlide === 0"
+            :aria-label="t('productDetail.recommended.navigation.previous')" @click="prevSlide">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M15 18L9 12L15 6"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
+              <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
             </svg>
           </button>
 
@@ -37,20 +43,11 @@
             </div>
           </div>
 
-          <button
-            class="carousel-btn next-btn"
-            :disabled="currentSlide >= maxSlide"
-            :aria-label="t('productDetail.recommended.navigation.next')"
-            @click="nextSlide"
-          >
+          <button class="carousel-btn next-btn" :disabled="currentSlide >= maxSlide"
+            :aria-label="t('productDetail.recommended.navigation.next')" @click="nextSlide">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M9 18L15 12L9 6"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
+              <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
             </svg>
           </button>
         </div>
@@ -59,26 +56,17 @@
       <!-- Mobile Grid Version -->
       <div class="mobile-only">
         <div class="products-grid">
-          <ProductCard
-            v-for="product in recommendedProducts.slice(0, 3)"
-            :key="product.id"
-            :product="product"
-          />
+          <ProductCard v-for="product in recommendedProducts.slice(0, 3)" :key="product.id" :product="product" />
         </div>
       </div>
 
       <!-- View All Button -->
-      <div class="button-wrapper">
+      <div class="button-wrapper-mobile">
         <button class="view-all-btn" @click="goToProductList">
           {{ t('productDetail.recommended.viewAllButton') }}
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M9 18L15 12L9 6"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
+            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
           </svg>
         </button>
       </div>
@@ -201,18 +189,24 @@ onUnmounted(() => {
   @apply max-w-[1400px] mx-auto px-5 xl:px-10;
 }
 
+.content-wrapper {
+  @apply flex flex-col xl:flex-row items-center xl:items-end mb-8 xl:mb-10;
+  @apply w-full;
+  @apply justify-between;
+}
+
 /* ==================== Decorative Flower ==================== */
 .flower-icon {
-  @apply flex justify-center mb-4 xl:mb-6;
+  @apply w-full flex justify-center xl:justify-start mb-8 xl:mb-6;
 }
 
 .flower-icon img {
-  @apply w-[50px] h-[50px] xl:w-[70px] xl:h-[70px];
+  @apply w-[100px] h-[100px];
 }
 
 /* ==================== Section Title ==================== */
 .section-title {
-  @apply font-trajan font-bold text-2xl xl:text-4xl text-center mb-8 xl:mb-10;
+  @apply font-trajan font-bold text-3xl xl:text-5xl text-center xl:text-left;
   @apply text-[#173760];
   letter-spacing: 0.05em;
 }
@@ -261,8 +255,12 @@ onUnmounted(() => {
 }
 
 /* ==================== View All Button ==================== */
-.button-wrapper {
-  @apply flex justify-center mt-8 xl:mt-10;
+.button-wrapper-mobile {
+  @apply flex justify-center mt-8 xl:mt-10 xl:hidden;
+}
+
+.button-wrapper-desktop {
+  @apply justify-end hidden xl:flex;
 }
 
 .view-all-btn {

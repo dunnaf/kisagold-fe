@@ -3,6 +3,11 @@
     <HPHeroCarousel v-if="isLoaded" />
     <HPShopByCategory v-if="isLoaded" />
     <HPProductSelection v-if="isLoaded" />
+    <HPArchipelago v-if="isLoaded" />
+    <HPWhyChoose v-if="isLoaded" />
+    <HPPriceTable v-if="isLoaded" />
+    <HowToPurchase v-if="isLoaded" />
+    <HPFaq v-if="isLoaded" />
   </AppLayout>
 </template>
 
@@ -13,6 +18,11 @@ import AppLayout from '../components/layout/AppLayout.vue'
 import HPHeroCarousel from '../components/homepage/HPHeroCarousel.vue'
 import HPShopByCategory from '../components/homepage/HPShopByCategory.vue'
 import HPProductSelection from '../components/homepage/HPProductSelection.vue'
+import HPArchipelago from '../components/homepage/HPArchipelago.vue'
+import HPWhyChoose from '../components/homepage/HPWhyChoose.vue'
+import HPPriceTable from '../components/homepage/HPPriceTable.vue'
+import HowToPurchase from '../components/common/HowToPurchase.vue'
+import HPFaq from '../components/homepage/HPFaq.vue'
 
 // ==================== State ====================
 const isLoaded = ref(false)
