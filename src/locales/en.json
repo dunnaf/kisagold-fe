@@ -196,7 +196,7 @@
         "buttonText": "Inquire now"
       },
       "legacyPreserved": {
-        "title": "Legacy Preserved",
+        "title": "KISA24",
         "price": "Rp 263.321.400",
         "description": "Every small step today, safeguarded by the love you leave behind. Because love doesn't end—it's passed on.",
         "buttonText": "Inquire now"
@@ -257,7 +257,9 @@
     "buybackPriceLabel": "Buyback Price (Rp)",
     "classic24k": "KISA24 Classic — 24K (99% purity)",
     "classic999": "KISA24 Classic — 999.9 (SNI-certified)",
-    "inquireButton": "INQUIRE NOW"
+    "inquireButton": "INQUIRE NOW",
+    "noData": "No price data available at this time.",
+    "errorData": "Unable to load prices. Please try again later."
   },
   "howToPurchase": {
     "title": "How To Purchase",

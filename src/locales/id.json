@@ -196,7 +196,7 @@
         "buttonText": "Tanyakan sekarang"
       },
       "legacyPreserved": {
-        "title": "Warisan Terjaga",
+        "title": "KISA24",
         "price": "Rp 263.321.400",
         "description": "Setiap langkah kecil hari ini, dilindungi oleh cinta yang kamu tinggalkan. Karena cinta tidak berakhir—ia diteruskan.",
         "buttonText": "Tanyakan sekarang"
@@ -257,7 +257,9 @@
     "buybackPriceLabel": "Harga Buyback (Rp)",
     "classic24k": "KISA24 Classic — 24K (kemurnian 99%)",
     "classic999": "KISA24 Classic — 999.9 (bersertifikat SNI)",
-    "inquireButton": "TANYAKAN SEKARANG"
+    "inquireButton": "TANYAKAN SEKARANG",
+    "noData": "Data harga belum tersedia saat ini.",
+    "errorData": "Gagal memuat harga. Silakan coba lagi nanti."
   },
   "howToPurchase": {
     "title": "Cara Pembelian",

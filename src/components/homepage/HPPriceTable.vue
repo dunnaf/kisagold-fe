@@ -21,14 +21,19 @@
       </header>
 
       <!-- Date Badge -->
-      <div class="date-badge-wrapper">
+      <div v-if="formattedDate" class="date-badge-wrapper">
         <div class="date-badge">
           {{ formattedDate }}
         </div>
       </div>
 
+      <!-- Empty / Error Placeholder -->
+      <div v-if="!priceGroups.length" class="empty-placeholder">
+        <p class="empty-text">{{ hasError ? t('priceTable.errorData') : t('priceTable.noData') }}</p>
+      </div>
+
       <!-- Price Table -->
-      <div class="table-wrapper">
+      <div v-else class="table-wrapper">
         <table class="price-table-content" role="table" aria-label="Gold price table">
           <!-- Table Header -->
           <thead>
@@ -66,42 +71,56 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useLanguage } from '@/composables/useLanguage'
-import { getPriceTable } from '@/temp-data/db.js'
+import { fetchPriceData } from '@/services/priceService.js'
 import { openWhatsApp } from '@/utils/whatsapp.js'
+import { withLoading } from '@/utils/loading'
 
 // ==================== i18n Setup ====================
 const { t, locale } = useLanguage()
 
+// ==================== State ====================
+const groups     = ref([])
+const lastUpdate = ref(null)   // "4 Feb 2026 11.00 WIB" string from API
+const hasError   = ref(false)
 
-// ==================== Data ====================
-const priceTable = getPriceTable()
+// ==================== Lifecycle ====================
+onMounted(async () => {
+  try {
+    const data = await withLoading(() => fetchPriceData())
+    groups.value     = data.groups
+    lastUpdate.value = data.lastUpdate
+  } catch (err) {
+    console.error('[HPPriceTable] Failed to load prices:', err)
+    hasError.value = true
+  }
+})
 
 // ==================== Computed ====================
 const priceGroups = computed(() =>
-  priceTable.groups.map(group => ({
+  groups.value.map(group => ({
     ...group,
-    label: group.label[locale.value] ?? group.label.en
+    label: typeof group.label === 'object'
+      ? (group.label[locale.value] ?? group.label.en)
+      : group.label
   }))
 )
 
 const formattedDate = computed(() => {
-  const date = new Date(priceTable.updatedAt)
-  const options = { day: 'numeric', month: 'short', year: 'numeric' }
-  const localeDateStr = date.toLocaleDateString(
-    locale.value === 'id' ? 'id-ID' : 'en-GB',
-    options
-  )
-  const hours = date.getHours().toString().padStart(2, '0')
-  const minutes = date.getMinutes().toString().padStart(2, '0')
   const label = locale.value === 'id' ? 'Tanggal' : 'Date'
-  return `${label}: ${localeDateStr} ${hours}:${minutes} WIB`
+  if (lastUpdate.value) {
+    // API returns a ready-made string e.g. "4 Feb 2026 11.00 WIB"
+    return `${label}: ${lastUpdate.value}`
+  }
+  // Fallback: no date available yet (loading or error)
+  return ''
 })
 
 // ==================== Methods ====================
 const formatPrice = (price) => {
-  return `Rp ${price.toLocaleString('id-ID')}`
+  if (price == null) return '—'
+  return `Rp ${Number(price).toLocaleString('id-ID')}`
 }
 
 const handleInquire = () => {
@@ -167,6 +186,16 @@ const handleInquire = () => {
 .date-badge:hover {
   @apply -translate-y-0.5;
   box-shadow: 0 6px 16px rgba(23, 55, 96, 0.3);
+}
+
+/* ==================== Empty / Error Placeholder ==================== */
+.empty-placeholder {
+  @apply flex justify-center items-center py-12;
+}
+
+.empty-text {
+  @apply font-assistant text-sm xl:text-base text-center opacity-70;
+  color: #FCFDF5;
 }
 
 /* ==================== Price Table ==================== */

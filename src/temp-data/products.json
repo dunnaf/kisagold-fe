@@ -203,7 +203,7 @@
     {
       "id": 6,
       "slug": "kisa24-999-99-1gr",
-      "name": "KISA24 999.99 1gr",
+      "name": "KISA24 999.9 1gr",
       "categoryId": "999-99",
       "subCategoryId": null,
       "price": 2960000,
@@ -218,7 +218,7 @@
       "isFeatured": false,
       "sortOrder": 1,
       "details": {
-        "type": "KISA24 999.99 1gr",
+        "type": "KISA24 999.9 1gr",
         "netWeight": "1gr",
         "dimensions": "15mm x 9mm x 1.2mm",
         "purity": "99.99%",
@@ -243,7 +243,7 @@
     {
       "id": 7,
       "slug": "kisa24-999-99-5gr",
-      "name": "KISA24 999.99 5gr",
+      "name": "KISA24 999.9 5gr",
       "categoryId": "999-99",
       "subCategoryId": null,
       "price": 14600000,
@@ -258,7 +258,7 @@
       "isFeatured": false,
       "sortOrder": 2,
       "details": {
-        "type": "KISA24 999.99 5gr",
+        "type": "KISA24 999.9 5gr",
         "netWeight": "5gr",
         "dimensions": "27mm x 16mm x 2mm",
         "purity": "99.99%",
@@ -283,7 +283,7 @@
     {
       "id": 8,
       "slug": "kisa24-999-99-10gr",
-      "name": "KISA24 999.99 10gr",
+      "name": "KISA24 999.9 10gr",
       "categoryId": "999-99",
       "subCategoryId": null,
       "price": 29000000,
@@ -298,7 +298,7 @@
       "isFeatured": false,
       "sortOrder": 3,
       "details": {
-        "type": "KISA24 999.99 10gr",
+        "type": "KISA24 999.9 10gr",
         "netWeight": "10gr",
         "dimensions": "35mm x 20mm x 3mm",
         "purity": "99.99%",
@@ -323,7 +323,7 @@
     {
       "id": 9,
       "slug": "kisa24-999-99-25gr",
-      "name": "KISA24 999.99 25gr",
+      "name": "KISA24 999.9 25gr",
       "categoryId": "999-99",
       "subCategoryId": null,
       "price": 72300000,
@@ -338,7 +338,7 @@
       "isFeatured": false,
       "sortOrder": 4,
       "details": {
-        "type": "KISA24 999.99 25gr",
+        "type": "KISA24 999.9 25gr",
         "netWeight": "25gr",
         "dimensions": "49mm x 29mm x 4mm",
         "purity": "99.99%",
@@ -363,7 +363,7 @@
     {
       "id": 10,
       "slug": "kisa24-999-99-100gr",
-      "name": "KISA24 999.99 100gr",
+      "name": "KISA24 999.9 100gr",
       "categoryId": "999-99",
       "subCategoryId": null,
       "price": 287500000,
@@ -378,7 +378,7 @@
       "isFeatured": true,
       "sortOrder": 5,
       "details": {
-        "type": "KISA24 999.99 100gr",
+        "type": "KISA24 999.9 100gr",
         "netWeight": "100gr",
         "dimensions": "75mm x 45mm x 6mm",
         "purity": "99.99%",

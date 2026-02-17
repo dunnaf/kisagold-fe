@@ -7,8 +7,6 @@
 
 import productsData from './products.json'
 import categoriesData from './categories.json'
-import pricesData from './prices.json'
-
 // ==================== Categories ====================
 
 /**
@@ -83,14 +81,6 @@ export const getProductsBySubCategory = (subCategoryId) => {
  */
 export const getFeaturedProducts = (limit = 4) =>
   productsData.products.filter(p => p.isFeatured).slice(0, limit)
-
-// ==================== Prices ====================
-
-/**
- * Returns the full price table data (updatedAt + groups with rows).
- * @returns {{ updatedAt: string, groups: Array }}
- */
-export const getPriceTable = () => pricesData
 
 /**
  * Returns products recommended relative to a given product.

@@ -12,8 +12,8 @@
         {{ product.name }}
       </h3>
 
-      <!-- Product Price -->
-      <p class="product-price">
+      <!-- Product Price — hidden for custom category (price is inquiry-based) -->
+      <p v-if="product.categoryId !== 'custom'" class="product-price">
         {{ formatPrice(product.price) }}
       </p>
     </div>
