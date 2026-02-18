@@ -122,7 +122,7 @@ const { currentLanguage, availableLanguages, changeLanguage, t } = useLanguage()
 // ==================== Configuration ====================
 const navItems = computed(() => [
   { to: { path: '/', hash: '#about' }, label: t('nav.about') },
-  { to: { path: '/', hash: '#products' }, label: t('nav.products') },
+  { to: { path: '/products' }, label: t('nav.products') },
   { to: { path: '/', hash: '#category' }, label: t('nav.category') },
   { to: { path: '/', hash: '#price' }, label: t('nav.price') }
 ])

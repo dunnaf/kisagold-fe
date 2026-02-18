@@ -190,13 +190,13 @@
   "heroCarousel": {
     "slides": {
       "kisa24": {
-        "title": "KISA24",
+        "title": "Logam Mulia KISA24",
         "price": "Rp 263.321.400",
         "description": "Dari tangan Anda ke tangan mereka—hadiah yang tak pernah kehilangan kilaunya. Warisan yang bertahan lintas generasi.",
         "buttonText": "Tanyakan sekarang"
       },
       "legacyPreserved": {
-        "title": "KISA24",
+        "title": "Logam Mulia KISA24",
         "price": "Rp 263.321.400",
         "description": "Setiap langkah kecil hari ini, dilindungi oleh cinta yang kamu tinggalkan. Karena cinta tidak berakhir—ia diteruskan.",
         "buttonText": "Tanyakan sekarang"
@@ -230,7 +230,7 @@
     "flowerLogo": {
       "alt": "Logo Bunga KISA24"
     },
-    "title": "Dari kepulauan di bawah",
+    "title": "Hasil kekayaan alam nusantara",
     "description": {
       "highlight": "Setiap batangan emas KISA24 dapat dilacak sepenuhnya - keasliannya.",
       "muted": "Kami bermitra dengan perusahaan yang memiliki Izin Usaha Pertambangan (IUP), Izin Penjualan & Transportasi Pertambangan (IU PP), izin pemurnian & pengolahan."
@@ -249,7 +249,7 @@
     }
   },
   "priceTable": {
-    "title": "Nilai Tanpa Kompromi",
+    "title": "Harga Emas Terbaik",
     "description": "Meskipun emas dapat bergerak mengikuti pasar, kepercayaan tetap konstan. KISA24 hadir dengan harga terbaik di pasar dengan jaminan pembelian kembali seumur hidup — memastikan klien kami didukung tidak hanya pada saat pembelian, tetapi sepanjang tahun-tahun mendatang.",
     "date": "Tanggal: 10 Feb 2026 9:30 WIB",
     "weightLabel": "Berat (gr)",

@@ -133,6 +133,9 @@ const prevSlide = () => {
 
 // ==================== Card Click Handler ====================
 const handleCardClick = (categoryId) => {
+  return;
+
+  // TODO: uncomment when custom category is ready
   if (categoryId === 'custom') {
     openWhatsApp()
   } else {

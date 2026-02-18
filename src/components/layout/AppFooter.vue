@@ -80,7 +80,7 @@ const socialLinks = computed(() => [
   {
     name: 'instagram',
     label: t('footer.social.instagram'),
-    url: 'https://instagram.com/kisagold',
+    url: 'https://www.instagram.com/kisagold.id/',
     ariaLabel: 'Visit our Instagram page'
   },
   {

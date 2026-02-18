@@ -13,9 +13,9 @@
       </h2>
 
       <!-- Description -->
-      <p class="description">
+      <!-- <p class="description">
         {{ description }}
-      </p>
+      </p> -->
 
       <!-- Features List -->
       <div class="features-container">

@@ -8,9 +8,8 @@
  *   VITE_PRICE_UPDATE_API_URL → https://hornet.agase.xyz/api/logs/last-update/
  *
  * Group rules (matched against priceData keys):
- *   KISA24          → keys starting with "KISA24 "
- *   KISAGOLD 99.2%  → keys containing "KISAGOLD 992%"
- *   KISAGOLD 99.9%  → keys containing "KISAGOLD 999%"
+ *   KISA24 Classic 24K    → keys starting with "KISA24 24K"
+ *   KISA24 Classic 999.9  → keys starting with "KISA24 999.9"
  *
  * Throws on any network or non-200 error — callers handle it.
  */
@@ -19,9 +18,8 @@ const PRICE_API_URL        = import.meta.env.VITE_PRICE_API_URL
 const PRICE_UPDATE_API_URL = import.meta.env.VITE_PRICE_UPDATE_API_URL
 
 // ==================== Key classifiers ====================
-const isKisa24     = (key) => /^KISA24\s+/i.test(key)
-const isKisagold992 = (key) => /KISAGOLD\s*992%/i.test(key)
-const isKisagold999 = (key) => /KISAGOLD\s*999%/i.test(key)
+const isKisa24_24k  = (key) => /^KISA24\s+24K/i.test(key)
+const isKisa24_999  = (key) => /^KISA24\s+999\.9/i.test(key)
 
 // ==================== Weight extraction ====================
 /**
@@ -60,21 +58,15 @@ const buildRows = (priceData, keyMatcher) =>
 // ==================== Group definitions ====================
 const GROUP_DEFS = [
   {
-    categoryId: 'kisa24',
-    label: { en: 'KISA24', id: 'KISA24' },
-    matcher: isKisa24
+    categoryId: 'classic-24k',
+    label: { en: 'KISA24 Classic 24K', id: 'KISA24 Classic 24K' },
+    matcher: isKisa24_24k
   },
-  // TODO: unhide when data is ready
-  // {
-  //   categoryId: 'kisagold-992',
-  //   label: { en: 'KISAGOLD 99.2% (Non Brand)', id: 'KISAGOLD 99.2% (Non Brand)' },
-  //   matcher: isKisagold992
-  // },
-  // {
-  //   categoryId: 'kisagold-999',
-  //   label: { en: 'KISAGOLD 99.9% (KISA24)', id: 'KISAGOLD 99.9% (KISA24)' },
-  //   matcher: isKisagold999
-  // }
+  {
+    categoryId: 'classic-999',
+    label: { en: 'KISA24 Classic 999.9', id: 'KISA24 Classic 999.9' },
+    matcher: isKisa24_999
+  }
 ]
 
 // ==================== Main export ====================
